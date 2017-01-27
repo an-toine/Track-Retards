@@ -3,16 +3,15 @@
 
 from datetime import datetime, timedelta
 import json, urllib.request, base64
-from Event import event
-from Tools import tools
+from libsncf.Event import event
+from libsncf.Tools import tools
 
 #Class used to store informations about a cancelation
 class canceled(event):
-	def __init__(self, disruption, num_train):
+	def __init__(self, disruption, num_train, object_tools):
 		#Save the cause of the cancelation and the trip id
 		cause = disruption["disruptions"][0]["messages"][0]["text"]
 		trip_id = disruption["disruptions"][0]["impacted_objects"][0]["pt_object"]["trip"]["id"]
-		object_tools = tools()
 		#Get information about the trip with the trip id
 		trip = object_tools.get_trip(trip_id)
 		departure_city = trip["vehicle_journeys"][0]["stop_times"][0]["stop_point"]["name"]

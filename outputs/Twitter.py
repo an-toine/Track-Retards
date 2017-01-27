@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # coding: utf8
 
-from Delay import delay
-from Event import event
-from Canceled import canceled
-from datetime import datetime
 import tweepy
+from libsncf.Delay import delay
+from libsncf.Event import event
+from libsncf.Canceled import canceled
+from datetime import datetime
 
 class twitter(object):
 

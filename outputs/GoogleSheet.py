@@ -4,15 +4,14 @@
 from __future__ import print_function
 import httplib2
 import os
-
 from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
-from Delay import delay
-from Event import event
-from Canceled import canceled
 from datetime import datetime
+from libsncf.Delay import delay
+from libsncf.Event import event
+from libsncf.Canceled import canceled
 
 #Class used to save data in a Google Sheet document
 class googleSheet(object):

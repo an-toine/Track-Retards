@@ -2,7 +2,7 @@
 # coding: utf8
 
 from datetime import datetime, timedelta
-from Event import event
+from libsncf.Event import event
 
 #Class used to store the details of a delay
 class delay(event):

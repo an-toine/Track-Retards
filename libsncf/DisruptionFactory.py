@@ -2,17 +2,18 @@
 # coding: utf8
 
 from datetime import datetime
-from Delay import delay
-from Canceled import canceled
+from libsncf.Delay import delay
+from libsncf.Canceled import canceled
 
 #Factory creating the right object for a specified disruption
 class disruptionFactory(object):
 
-	def __init__(self, response, num_train):
+	def __init__(self, response, num_train, object_tools):
 		#We assume that the train is not (yet) canceled
 		self._canceled_train = False
 		self._response = response
 		self._num_train = num_train
+		self._object_tools = object_tools
 		#There should be just one disruption, but just in case, we loop on it
 		for disruption in response["disruptions"]:
 			#If the effect of the disruption on the train is "NO_SERVICE", the train is canceled
@@ -27,6 +28,14 @@ class disruptionFactory(object):
 	def canceled_train(self, value):
 		self._canceled_train = value
 
+	@property
+	def object_tools(self):
+		return self._object_tools
+
+	@object_tools.setter
+	def object_tools(self, value):
+		self._object_tools = value
+
 	def get_event(self):
 		#This method returns the appropriate object to store the disruption
 		if self._canceled_train :
@@ -39,7 +48,7 @@ class disruptionFactory(object):
 				#If the disruption was updated today, and we are in the range of the application period
 				if datetime.now().day == end_application_date.day and datetime.now().day == begin_application_date.day and updated_at_date.strftime("%Y%m%d") == today:
 					#Return a canceled object
-					return canceled(self._response, self._num_train)
+					return canceled(self._response, self._num_train, self._object_tools)
 				else:
 					return None
 		else:

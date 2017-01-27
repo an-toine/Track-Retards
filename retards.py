@@ -3,11 +3,11 @@
 
 import json, urllib.request, base64, argparse, time, re
 from datetime import datetime, timedelta
-from Delay import delay
-from GoogleSheet import googleSheet
-from DisruptionFactory import disruptionFactory
-from Twitter import twitter
-from Tools import tools
+from libsncf.Delay import delay
+from libsncf.DisruptionFactory import disruptionFactory
+from libsncf.Tools import tools
+from outputs.GoogleSheet import googleSheet
+from outputs.Twitter import twitter
 from Settings import settings
 
 
@@ -32,7 +32,7 @@ if __name__ == '__main__':
 	response = object_tools.get_disruptions(num_train)
 
 	#Create the appropriate event for the disruption
-	factory = disruptionFactory(response,num_train)
+	factory = disruptionFactory(response,num_train,object_tools)
 
 	#Get this event
 	event = factory.get_event()
