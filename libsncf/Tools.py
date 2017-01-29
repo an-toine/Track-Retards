@@ -9,12 +9,13 @@ class tools(object):
 	def __init__(self,settings):
 		#Store the access token from the settings to auth on the API
 		self._token_sncf = settings.sncf["token"]
+		self._server_name = settings.sncf["server_name"]
 
 	def _create_headers(self):
 		#Headers used to authenticate on the API
 		user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"
 		#Basic HTTP auth, the token is the username, no password used
-		auth = base64.encodestring(('%s:%s' % (self._token_sncf,'')).encode()).decode().replace('\n', '')
+		auth = base64.encodebytes(('%s:%s' % (self._token_sncf,'')).encode()).decode().replace('\n', '')
 		headers = {
 			"Authorization"	: "Basic %s" % auth,
 			"User-Agent" : "%s" % user_agent
@@ -63,12 +64,12 @@ class tools(object):
 
 	def get_disruptions(self,num_train):
 		#Public method to download the last disruption for a train number
-		url = "https://api.sncf.com/v1/coverage/sncf/disruptions?count=1&headsign="+str(num_train)
+		url = self._server_name+"v1/coverage/sncf/disruptions?count=1&headsign="+str(num_train)
 		return self._browse_disruptions(url)
 
 	def get_trip(self,trip_id):
 		#Method used to download informations about a trip id
-		url = "https://api.sncf.com/v1/coverage/sncf/trips/"+trip_id+"/vehicle_journeys"
+		url = self._server_name+"v1/coverage/sncf/trips/"+trip_id+"/vehicle_journeys"
 		request = urllib.request.Request(url, None, self._create_headers())
 		json_obj = None
 		try:

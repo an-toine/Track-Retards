@@ -1,0 +1,236 @@
+{
+    "disruptions": [
+        {
+            "cause": "",
+            "id": "c0d12106-fab6-4218-8744-e8875b0f908c",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "contributor": "",
+            "impacted_objects": [
+                {
+                    "pt_object": {
+                        "name": "OCE:SN096558F05007",
+                        "id": "OCE:SN096558F05007",
+                        "trip": {
+                            "id": "OCE:SN096558F05007",
+                            "name": "96558"
+                        },
+                        "embedded_type": "trip",
+                        "quality": 0
+                    },
+                    "impacted_stops": [
+                        {
+                            "base_departure_time": "092900",
+                            "cause": "",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-85010082",
+                                "coord": {
+                                    "lat": "46.21055",
+                                    "lon": "6.143156"
+                                },
+                                "label": "Gen\u00e8ve (Gen\u00e8ve)",
+                                "links": [],
+                                "name": "Gen\u00e8ve"
+                            },
+                            "amended_arrival_time": "092900",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "092900",
+                            "amended_departure_time": "092900"
+                        },
+                        {
+                            "base_departure_time": "095800",
+                            "cause": "",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87745000",
+                                "coord": {
+                                    "lat": "46.109697",
+                                    "lon": "5.823646"
+                                },
+                                "label": "Bellegarde-Gare (Bellegarde-sur-Valserine)",
+                                "links": [],
+                                "name": "Bellegarde-Gare"
+                            },
+                            "amended_arrival_time": "095500",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "095500",
+                            "amended_departure_time": "095800"
+                        },
+                        {
+                            "base_departure_time": "101100",
+                            "cause": "",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87745828",
+                                "coord": {
+                                    "lat": "45.963055",
+                                    "lon": "5.831489"
+                                },
+                                "label": "Seyssel-Corbonod (Corbonod)",
+                                "links": [],
+                                "name": "Seyssel-Corbonod"
+                            },
+                            "amended_arrival_time": "101100",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "101100",
+                            "amended_departure_time": "101100"
+                        },
+                        {
+                            "base_departure_time": "102300",
+                            "cause": "",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87741074",
+                                "coord": {
+                                    "lat": "45.843251",
+                                    "lon": "5.778699"
+                                },
+                                "label": "Culoz (Culoz)",
+                                "links": [],
+                                "name": "Culoz"
+                            },
+                            "amended_arrival_time": "102100",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "102100",
+                            "amended_departure_time": "102300"
+                        },
+                        {
+                            "base_departure_time": "104300",
+                            "cause": "",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87743757",
+                                "coord": {
+                                    "lat": "45.922294",
+                                    "lon": "5.500951"
+                                },
+                                "label": "Tenay-Hauteville (Tenay)",
+                                "links": [],
+                                "name": "Tenay-Hauteville"
+                            },
+                            "amended_arrival_time": "104200",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "104200",
+                            "amended_departure_time": "104300"
+                        },
+                        {
+                            "base_departure_time": "105800",
+                            "cause": "",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87743716",
+                                "coord": {
+                                    "lat": "45.954003",
+                                    "lon": "5.342314"
+                                },
+                                "label": "Amb\u00e9rieu-en-Bugey (Amb\u00e9rieu-en-Bugey)",
+                                "links": [],
+                                "name": "Amb\u00e9rieu-en-Bugey"
+                            },
+                            "amended_arrival_time": "105600",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "105600",
+                            "amended_departure_time": "105800"
+                        },
+                        {
+                            "base_departure_time": "112700",
+                            "cause": "Train en panne",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87723197",
+                                "coord": {
+                                    "lat": "45.76058",
+                                    "lon": "4.859438"
+                                },
+                                "label": "Lyon-Part-Dieu (Lyon)",
+                                "links": [],
+                                "name": "Lyon-Part-Dieu"
+                            },
+                            "amended_arrival_time": "113200",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "112200",
+                            "amended_departure_time": "113700"
+                        },
+                        {
+                            "base_departure_time": "113500",
+                            "cause": "Train en panne",
+                            "stop_point": {
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TrainTER-87722025",
+                                "coord": {
+                                    "lat": "45.748488",
+                                    "lon": "4.825751"
+                                },
+                                "label": "Lyon-Perrache (Lyon)",
+                                "links": [],
+                                "name": "Lyon-Perrache"
+                            },
+                            "amended_arrival_time": "114500",
+                            "stop_time_effect": "delayed",
+                            "base_arrival_time": "113500",
+                            "amended_departure_time": "114500"
+                        }
+                    ]
+                }
+            ],
+            "application_periods": [
+                {
+                    "end": "20170118T113459",
+                    "begin": "20170118T092900"
+                }
+            ],
+            "uri": "c0d12106-fab6-4218-8744-e8875b0f908c",
+            "status": "active",
+            "disruption_id": "c0d12106-fab6-4218-8744-e8875b0f908c",
+            "updated_at": "20170127T001241",
+            "impact_id": "c0d12106-fab6-4218-8744-e8875b0f908c",
+            "disruption_uri": "c0d12106-fab6-4218-8744-e8875b0f908c"
+        }
+    ],
+    "links": [
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruptions.id}",
+            "templated": true,
+            "rel": "disruptions",
+            "type": "disruptions"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trip.id}",
+            "templated": true,
+            "rel": "trips",
+            "type": "trip"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/stop_points/{stop_point.id}",
+            "templated": true,
+            "rel": "stop_points",
+            "type": "stop_point"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?start_page=1",
+            "templated": false,
+            "type": "next"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?start_page=8.0",
+            "templated": false,
+            "type": "last"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions",
+            "templated": false,
+            "type": "first"
+        }
+    ],
+    "pagination": {
+        "start_page": 0,
+        "items_on_page": 1,
+        "items_per_page": 1,
+        "total_result": 9
+    }
+}

@@ -15,7 +15,7 @@ if __name__ == '__main__':
 	#Deal with command line arguments
 	parser = argparse.ArgumentParser(description='Programme permettant de récupérer les retards pour un numéro de train')
 	parser.add_argument('num_train', action="store", type=int, help="Numéro du train à récupérer")
-	parser.add_argument('--config', action="store", type=str, help="Emplacement du fichier de configuration")
+	parser.add_argument('--config', action="store", type=str, default="retards.cfg", help="Emplacement du fichier de configuration")
 	parser.add_argument('--no-google-sheets', action="store_true", default=False, dest="no_google_sheet", help="Ne pas envoyer les données sur Google Sheets")
 	parser.add_argument('--no-twitter', action="store_true", default=False, dest="no_twitter", help="Ne pas envoyer les données sur Twitter")
 	parser.add_argument('--version', action='version', version='%(prog)s 1.0')

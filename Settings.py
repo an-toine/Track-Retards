@@ -9,16 +9,16 @@ class settings(object):
 		#Allow null values
 		self._config_parser = configparser.ConfigParser(allow_no_value=True)
 		#If no config file is issued, we try to load one in the current directory
-		try:
-			self._config_parser.read(config_file)
-		except:
-			self._config_parser.read("retards.cfg")
+		self._config_parser.read(config_file)
+		if len(self._config_parser.sections()) == 0:
+			raise FileNotFoundError("Impossible de charger le fichier de configuration !")
 		
 		#Load data
 		self._sncf = {}
 		self._twitter = {}
 		self._google = {}
 		self._sncf["token"] = self._config_parser.get("SNCF", "token")
+		self._sncf["server_name"] = self._config_parser.get("SNCF", "server_name")
 		self._twitter["consumer_key"] = self._config_parser.get("Twitter", "consumer_key")
 		self._twitter["consumer_secret"] = self._config_parser.get("Twitter", "consumer_secret")
 		self._twitter["access_token"] = self._config_parser.get("Twitter", "access_token")

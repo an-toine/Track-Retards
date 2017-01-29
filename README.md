@@ -97,3 +97,23 @@ Il est alors possible de définir à la ligne `secret_file` le nom et l'emplacem
     Heure d'arrivée effective : 20:21:00
     Retard : 0:20:00
     Cause : Indisponibilité d'un matériel
+
+##Tests du code
+
+Pour controler les modifications apportées au code, des tests unitaires ont été écrits dans le fichier `tests.py`.
+Leur réalisation nécessite l'installation des modules python `unittest` et `tornado`.
+
+Pour pouvoir disposer de deux situations de test, les réponses renvoyées par l'API de la SNCF ont été sauvegardées dans deux répertoires distincts du dossier `test_server` du projet :
+
+ * Le train 889951, qui est supprimé,
+ * Le train 96559, en retard de 10 minutes
+
+Ces réponses sont adaptées à la date de réalisation des tests, et envoyées par un serveur Tornado situé dans le script `test_server/server.py`.
+
+###Réalisation des tests
+
+Modifier l'option `server_name` de la section **SNCF** pour y définir la valeur `http://127.0.0.1:8080/`.
+
+Démarrer ensuite le serveur Tornado : `test_server/server.py`.
+
+Une fois le serveur démarré, lancer les tests avec la commande `python -m unittest` à la racine du projet.
