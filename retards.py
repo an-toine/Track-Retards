@@ -6,10 +6,19 @@ from datetime import datetime, timedelta
 from libsncf.Delay import delay
 from libsncf.DisruptionFactory import disruptionFactory
 from libsncf.Tools import tools
-from outputs.GoogleSheet import googleSheet
-from outputs.Twitter import twitter
 from Settings import settings
 
+try:
+	from outputs.GoogleSheet import googleSheet
+	google_sheet_not_available = False
+except ImportError:
+	google_sheet_not_available = True
+
+try:
+	from outputs.Twitter import twitter
+	twitter_not_available = False
+except Exception:
+	twitter_not_available = True
 
 if __name__ == '__main__':
 	#Deal with command line arguments
@@ -49,14 +58,14 @@ if __name__ == '__main__':
 	#Display the event
 	print(str(event))
 
-	#If Google Sheet is not canceled by the user
-	if(not results.no_google_sheet):
+	#If Google Sheet is not canceled by the user, and the import of required modules succeeded
+	if(not results.no_google_sheet and not google_sheet_not_available):
 		#Instanciate a Google Sheet object with settings
 		sheet = googleSheet(settings)
 		sheet.upload_data(event)
 
-	#If Twitter is not canceled by the user
-	if(not results.no_twitter):
+	#If Twitter is not canceled by the user, and the import of required modules succeeded
+	if(not results.no_twitter and not twitter_not_available):
 		#Instanciate a Twitter object with settings
 		twitter_service = twitter()
 		twitter_service.post_event(event)
