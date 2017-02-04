@@ -67,5 +67,5 @@ if __name__ == '__main__':
 	#If Twitter is not canceled by the user, and the import of required modules succeeded
 	if(not results.no_twitter and not twitter_not_available):
 		#Instanciate a Twitter object with settings
-		twitter_service = twitter()
+		twitter_service = twitter(settings)
 		twitter_service.post_event(event)
