@@ -11,7 +11,8 @@ Pour utiliser cette application, un certain nombre de prérequis doivent être v
 
  * Une installation de Python 3, le code n'ayant pas été testé sur des versions antérieures
  * Des identifiants pour accéder aux API de la SNCF, de Twitter, et de Google Documents
- * Les modules [tweepy](https://github.com/tweepy/tweepy), [google-api-python-client](https://pypi.python.org/pypi/google-api-python-client) doivent être installés
+ * Les modules [tweepy](https://github.com/tweepy/tweepy), [google-api-python-client](https://pypi.python.org/pypi/google-api-python-client), [dateutil](https://pypi.python.org/pypi/python-dateutil/2.6.0), [emoji](https://pypi.python.org/pypi/emoji) et [peewee](https://github.com/coleifer/peewee) doivent être installés pour utiliser les différents modules de sortie
+ * Un serveur et une base de données MySQL pour stocker la ponctualité des trains et afficher des statistiques détaillées sur les évènements de la semaine ou du mois.
 
 Toute la configuration se fait dans le fichier `retards.cfg`.
 
@@ -49,12 +50,34 @@ Il est alors possible de définir à la ligne `secret_file` le nom et l'emplacem
 
 À la première utilisation du script, une connexion au compte Google est demandée. Les paramètres d'accès sont alors stockés dans le fichier défini à la ligne `credentials_file` du fichier `retards.cfg`.
 
+###Stockage des données dans MySQL
+Si le module `peewee` est installé, il est possible de stocker dans une base de données des informations sur la ponctualité des trains et d'afficher des rapports détaillés sur ceux-ci.
+
+La configuration de ce module de sortie se fait dans le fichier `retards.cfg`, dans la section **MySQL**. Les options suivantes doivent être complétées :
+
+ * `mysql_host` : le nom d'hôte de la base de données
+ * `mysql_port` : le port de connexion à utiliser
+ * `mysql_user` : le nom d'utilisateur à utiliser pour se connecter
+ * `mysql_password` : le mot de passe de connexion de l'utilisateur
+ * `mysql_db` : la base de données qui contiendra les tables créées par le script
+
+À la première utilisation du script, les tables suivantes seront créées :
+
+ * `city`
+ * `disruption`
+ * `train`
+ * `trip`
+
+Ces tables sont alors alimentées à chaque utilisation du programme, même si le train n'a pas rencontré de difficulté sur son trajet.
+
 ##Utilisation
 
 ###Options courantes
 
     ./retards.py --help
-    usage: retards.py [-h] [--config CONFIG] [--no-google-sheets] [--no-twitter] [--version] num_train
+    usage: retards.py [-h] [--config CONFIG] [--show-stats] [--weekly] [--monthly]
+                      [--no-google-sheets] [--no-twitter] [--no-mysql] [--version]
+                      num_train
     
     Programme permettant de récupérer les retards pour un numéro de train
     
@@ -64,8 +87,13 @@ Il est alors possible de définir à la ligne `secret_file` le nom et l'emplacem
     optional arguments:
       -h, --help          show this help message and exit
       --config CONFIG     Emplacement du fichier de configuration
+      --show-stats        Afficher des statistiques pour ce train. Cette option
+                          requiert MySQL
+      --weekly            Afficher des statistiques hebdomadaires pour ce train.
+      --monthly           Afficher des statistiques mensuelles pour ce train.
       --no-google-sheets  Ne pas envoyer les données sur Google Sheets
       --no-twitter        Ne pas envoyer les données sur Twitter
+      --no-mysql          Ne pas envoyer les données sur MySQL
       --version           show program's version number and exit
 
 ###Récupérer le dernier retard d'un train
@@ -80,7 +108,7 @@ Il est alors possible de définir à la ligne `secret_file` le nom et l'emplacem
 
 ###Récupérer le dernier retard d'un train, sans partager les données
 
-    ./retards.py --no-twitter --no-google-sheets 17990
+    ./retards.py --no-twitter --no-google-sheets --no-mysql 17990
     Train numero 17990 Lyon-Part-Dieu => Annecy
     Heure de depart prévue : 18:08:00
     Heure d'arrivée prévue : 20:01:00
@@ -97,6 +125,51 @@ Il est alors possible de définir à la ligne `secret_file` le nom et l'emplacem
     Heure d'arrivée effective : 20:21:00
     Retard : 0:20:00
     Cause : Indisponibilité d'un matériel
+
+###Statistiques
+
+Note : pour utiliser au mieux cette fonctionnalité, il est nécessaire de disposer du plus de données possible pour un train.
+Il est donc conseillé d'exécuter de manière quotidienne ce programme (avec un outil comme `cron` par exemple) pour enregistrer chaque jour les évènements qui ont pu se produire sur le trajet.
+
+####Afficher les statistiques de ponctualité d'un train pour la semaine, sans envoyer de message sur Twitter
+
+    ./retards.py --no-twitter --show-stats --weekly 886739
+    Du 06/03/2017 au 12/03/2017, le train 886739 a été perturbé 2 voyages sur 4, soit un taux de ponctualité de 50.0%, en hausse par rapport à la periode précédente (3 perturbations, 50.0%, de ponctualité).
+    
+    Le retard moyen est de 6.25 minutes.
+    
+    Causes de perturbation :
+    
+    * Réutilisation d'un train : 1 problème
+    * Train en panne : 1 problème
+
+####Afficher les statistiques de ponctualité d'un train pour le mois, sans envoyer de message sur Twitter
+
+    ./retards.py --no-twitter --show-stats --monthly 886739
+    Du 01/03/2017 au 31/03/2017, le train 886739 a été perturbé 2 voyages sur 7, soit un taux de ponctualité de 71.43%, en hausse par rapport à la periode précédente (11 perturbations, 47.62%, de ponctualité).
+    
+    Le retard moyen est de 3.57 minutes.
+    
+    Causes de perturbation :
+    
+    * Train en panne : 1 problème
+    * Réutilisation d'un train : 1 problème
+
+####Afficher les statistiques de ponctualité d'un train pour le mois, et envoyer un message sur Twitter
+
+    ./retards.py --no-twitter --show-stats --monthly 886739
+    Du 01/03/2017 au 31/03/2017, le train 886739 a été perturbé 2 voyages sur 7, soit un taux de ponctualité de 71.43%, en hausse par rapport à la periode précédente (11 perturbations, 47.62%, de ponctualité).
+    
+    Le retard moyen est de 3.57 minutes.
+    
+    Causes de perturbation :
+    
+    * Train en panne : 1 problème
+    * Réutilisation d'un train : 1 problème
+
+###Compte Twitter de démonstration
+
+Le compte Twitter [@RALeBot](https://twitter.com/RALeBot) suit les trains TER 886811 et 886739 et permet de voir des exemples de messages qui peuvent être publiés.
 
 ##Tests du code
 

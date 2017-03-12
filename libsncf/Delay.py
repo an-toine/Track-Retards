@@ -36,6 +36,10 @@ class delay(event):
 	def base_arrival_date(self):
 		return datetime.strftime(self._base_arrival_date,"%H:%M:%S")
 
+	def get_base_arrival_datetime(self):
+		now = datetime.now()
+		return self._base_arrival_date.replace(now.year,now.month,now.day)
+
 	@base_arrival_date.setter
 	def base_arrival_date(self, value):
 		self._base_arrival_date = value

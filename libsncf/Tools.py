@@ -46,7 +46,7 @@ class tools(object):
 			else:
 				print("Une erreur s'est produite : "+str(e))
 		
-		if last_page == False:
+		if last_page is False:
 			#If we aren't on the last page (first call of the method), we extract the number of last one
 			last = None
 			for link in json_obj["links"]:
@@ -64,7 +64,7 @@ class tools(object):
 
 	def get_disruptions(self,num_train):
 		#Public method to download the last disruption for a train number
-		url = self._server_name+"v1/coverage/sncf/disruptions?count=1&headsign="+str(num_train)
+		url = self._server_name+"v1/coverage/sncf/disruptions?headsign="+str(num_train)
 		return self._browse_disruptions(url)
 
 	def get_trip(self,trip_id):
@@ -86,3 +86,13 @@ class tools(object):
 					exit(1)
 			else:
 				print("Une erreur s'est produite : "+str(e))
+
+	def headsign_to_tripid(self,headsign):
+		#Method used to convert a commercial headsign to a trip id
+		url = self._server_name+"v1/coverage/sncf/trips?headsign="+str(headsign)
+		request = urllib.request.Request(url, None, self._create_headers())
+		json_obj = None
+		with urllib.request.urlopen(request) as response:
+			page = response.read()
+			json_obj = json.loads(page.decode('utf-8'))
+		return json_obj["trips"][0]["id"]

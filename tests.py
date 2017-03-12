@@ -7,6 +7,7 @@ from libsncf.Tools import tools
 from libsncf.DisruptionFactory import disruptionFactory
 from libsncf.Delay import delay
 from libsncf.Canceled import canceled
+from libsncf.Trip import trip
 
 #Test case for the settings manager
 class SettingsTest(unittest.TestCase):
@@ -36,8 +37,22 @@ class ToolsTest(unittest.TestCase):
 		trip = self._object_tools.get_trip("OCE:SN889951F05003")
 		self.assertEqual(trip["vehicle_journeys"][0]["stop_times"][11]["stop_point"]["name"],"St-Etienne-Châteaucreux")
 
-#Test case for the DisruptionsFactory methods
+#Test case for the Trip methods
+class TripTest(unittest.TestCase):
+	#Set up the test
+	def setUp(self):
+		self._settings = settings("retards.cfg")
+		self._object_tools = tools(self._settings)
+		self._trip = trip(self._object_tools.get_trip("OCE:SN889951F05003"))
 
+	#Test Trip methods
+	def test_trip(self):
+		self.assertEqual(self._trip.departure_city,"Le Puy-en-Velay")
+		self.assertEqual(self._trip.arrival_city,"St-Etienne-Ch\u00e2teaucreux")
+		self.assertEqual(self._trip.departure,"043000")
+		self.assertEqual(self._trip.arrival,"060300")
+
+#Test case for the DisruptionsFactory methods
 class FactoryTest(unittest.TestCase):
 	#Set up the test
 	def setUp(self):

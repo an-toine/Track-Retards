@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import json, urllib.request, base64
 from libsncf.Event import event
 from libsncf.Tools import tools
+from libsncf.Trip import trip
 
 #Class used to store informations about a cancelation
 class canceled(event):
@@ -13,15 +14,9 @@ class canceled(event):
 		cause = disruption["disruptions"][0]["messages"][0]["text"]
 		trip_id = disruption["disruptions"][0]["impacted_objects"][0]["pt_object"]["trip"]["id"]
 		#Get information about the trip with the trip id
-		trip = object_tools.get_trip(trip_id)
-		departure_city = trip["vehicle_journeys"][0]["stop_times"][0]["stop_point"]["name"]
-		last_stop = len(trip["vehicle_journeys"][0]["stop_times"])-1
-		departure_city = trip["vehicle_journeys"][0]["stop_times"][0]["stop_point"]["name"]
-		departure = trip["vehicle_journeys"][0]["stop_times"][0]["departure_time"]
-		departure_date = datetime.strptime(departure,"%H%M%S")
-		arrival_city = trip["vehicle_journeys"][0]["stop_times"][last_stop]["stop_point"]["name"]
+		trip_object = trip(object_tools.get_trip(trip_id))
 		#Instanciate the parent class, event
-		event.__init__(self, cause, departure_city, arrival_city, departure_date, num_train)
+		event.__init__(self, cause, trip_object.departure_city, trip_object.arrival_city, trip_object.departure_datetime, num_train)
 
 	def __str__(self):
 		#Function called when the object is casted to string

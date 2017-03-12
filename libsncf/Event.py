@@ -42,6 +42,10 @@ class event(object):
 	def departure_date(self):
 		return datetime.strftime(self._departure_date,"%H:%M:%S")
 
+	def get_departure_datetime(self):
+		now = datetime.now()
+		return self._departure_date.replace(now.year,now.month,now.day)
+
 	@departure_date.setter
 	def departure_date(self, value):
 		self._departure_date = value

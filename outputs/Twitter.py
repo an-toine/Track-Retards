@@ -38,3 +38,7 @@ class twitter(object):
 			message = "@SNCF, mon #train {} {}/{} était #supprimé, une explication? #TER @auvergnerhalpes".format(event.num_train,event.departure_city,event.arrival_city)
 		#Publish the message
 		self._post(message)
+
+	def post_message(self, message):
+		if len(message)<140:
+			self._post(message)

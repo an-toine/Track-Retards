@@ -17,6 +17,7 @@ class settings(object):
 		self._sncf = {}
 		self._twitter = {}
 		self._google = {}
+		self._mysql = {}
 		self._sncf["token"] = self._config_parser.get("SNCF", "token")
 		self._sncf["server_name"] = self._config_parser.get("SNCF", "server_name")
 		self._twitter["consumer_key"] = self._config_parser.get("Twitter", "consumer_key")
@@ -27,6 +28,11 @@ class settings(object):
 		self._google["sheets_credentials_file"] = self._config_parser.get("Google-Sheets", "credentials_file")
 		self._google["sheets_spreadsheet_id"] = self._config_parser.get("Google-Sheets", "spreadsheet_id")
 		self._google["sheets_tab_name"] = self._config_parser.get("Google-Sheets", "tab_name")
+		self._mysql["mysql_host"] = self._config_parser.get("MySQL", "mysql_host")
+		self._mysql["mysql_port"] = int(self._config_parser.get("MySQL", "mysql_port"))
+		self._mysql["mysql_user"] = self._config_parser.get("MySQL", "mysql_user")
+		self._mysql["mysql_password"] = self._config_parser.get("MySQL", "mysql_password")
+		self._mysql["mysql_db"] = self._config_parser.get("MySQL", "mysql_db")
 
 	@property
 	def sncf(self):
@@ -39,3 +45,7 @@ class settings(object):
 	@property
 	def google(self):
 		return self._google
+
+	@property
+	def mysql(self):
+		return self._mysql
