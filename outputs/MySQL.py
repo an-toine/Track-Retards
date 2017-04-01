@@ -78,6 +78,14 @@ class mysql(object):
 				| (trip.trip_arrival_date.is_null(True)))
 				& (trip.trip_disruption.is_null(False)))
 			.count())
+		#Number of canceled Trains
+		stats_object.canceled_trip_count = (trip
+			.select()
+			.join(train)
+			.where((train.id_train == stats_object.num_train)
+				& (trip.trip_departure_date > stats_object.start_range)
+				& (trip.trip_arrival_date.is_null(True)))
+			.count())
 		#Fetch the number of normal trips on this date range
 		stats_object.normal_trip_count = (trip
 			.select()

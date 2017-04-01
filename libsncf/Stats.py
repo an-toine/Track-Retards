@@ -13,6 +13,7 @@ class stats(object):
 		self._num_train = num_train
 		self._trip_count = None
 		self._disrupted_trip_count = None
+		self._canceled_trip_count = None
 		self._normal_trip_count = None
 		self._last_trip_count = None
 		self._last_disrupted_trip_count = None
@@ -95,6 +96,10 @@ class stats(object):
 		return output
 
 	def get_twitter_post(self):
+		if self._range_type == 'MONTHLY':
+			range_word = "ce mois ci"
+		else:
+			range_word = "cette semaine"
 		if self._disrupted_trip_count > 0:
 			punctuality_rate = round((self._normal_trip_count / self._trip_count) * 100,2)
 			last_punctuality_rate = (self._last_normal_trip_count / self._last_trip_count) * 100
@@ -109,20 +114,19 @@ class stats(object):
 			else:
 				adjective = emoji.emojize("stable :arrow_right:",use_aliases=True)
 
-			if self._range_type == 'MONTHLY':
-				range_word = "ce mois ci"
-			else:
-				range_word = "cette semaine"
+			canceled_block = ""
+			if self._canceled_trip_count > 0:
+				canceled_block = "dont {} suppressions, ".format(self._canceled_trip_count)
 
-			output = "@SNCF #train {} perturbé {} fois {}, retard moyen de {} minutes, ponctualité de {}%, {}".format(self._num_train,
+			output = "@SNCF #train {} perturbé {} fois {}, {}retard moyen de {} minutes, ponctualité de {}%, {}".format(self._num_train,
 				self._disrupted_trip_count,
 				range_word,
+				canceled_block,
 				average_delay,
 				punctuality_rate,
 				adjective)
 		else:
-			output = emoji.emojize("@SNCF le #train {} n'a pas été perturbé {} :tada: Pourvu que ça dure...",use_aliases=True)
-			output.format(num_train, range_word)
+			output = emoji.emojize("@SNCF le #train {} n'a pas été perturbé {} :tada: Pourvu que ça dure...".format(self._num_train, range_word),use_aliases=True)
 
 		return output
 
@@ -161,6 +165,14 @@ class stats(object):
 	@disrupted_trip_count.setter
 	def disrupted_trip_count(self, value):
 		self._disrupted_trip_count = value
+
+	@property
+	def canceled_trip_count(self):
+		return self._canceled_trip_count
+
+	@canceled_trip_count.setter
+	def canceled_trip_count(self, value):
+		self._canceled_trip_count = value
 
 	@property
 	def normal_trip_count(self):

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf8
 
-import json, urllib.request, base64, argparse, time, re
+import json, urllib.request, urllib.parse, base64, argparse, time, re
 
 #Class used to download data from the SNCF API
 class tools(object):
@@ -51,20 +51,24 @@ class tools(object):
 			last = None
 			for link in json_obj["links"]:
 				if link["type"] == "last":
-					last = int(round(float(re.split("=",link["href"])[1])))
+					parameters = urllib.parse.parse_qs(urllib.parse.urlsplit(link["href"]).query)
+					last = parameters.get("start_page")
 			if last == None:
 				#No last page : just one element, send back the object
 				return json_obj
 			else:
 				#Last page found : call this method to download the last page, and therefore, the last element
-				return self._browse_disruptions(url,last_page=last)
+				return self._browse_disruptions(url,last_page=last[0])
 		else:
 			#We are on the last (most recent) disruption, we just send it back
 			return json_obj
 
-	def get_disruptions(self,num_train):
+	def get_disruptions(self,num_train,second_try=False):
 		#Public method to download the last disruption for a train number
-		url = self._server_name+"v1/coverage/sncf/disruptions?headsign="+str(num_train)
+		if second_try:
+			url = self._server_name+"v1/coverage/sncf/disruptions?headsign="+str(num_train)
+		else:
+			url = self._server_name+"v1/coverage/sncf/disruptions?count=1&headsign="+str(num_train)
 		return self._browse_disruptions(url)
 
 	def get_trip(self,trip_id):

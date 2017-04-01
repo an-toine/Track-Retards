@@ -67,12 +67,20 @@ if __name__ == '__main__':
 	
 	#Get disruptions for this train
 	response = object_tools.get_disruptions(num_train)
-
 	#Create the appropriate event for the disruption
 	factory = disruptionFactory(response,num_train,object_tools)
-
 	#Get this event
 	event = factory.get_event()
+
+	#There are two ways used to browse disruptions. If the first doesn't find the disruption,
+	#we retrieve disruptions using the second way, just to be sure to not miss anything...
+	if event is None:
+		#Get disruptions for this train
+		response = object_tools.get_disruptions(num_train,True)
+		#Create the appropriate event for the disruption
+		factory = disruptionFactory(response,num_train,object_tools)
+		#Get this event
+		event = factory.get_event()
 
 	mysql_service = None
 
