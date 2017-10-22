@@ -45,14 +45,14 @@ class tools(object):
 					exit(1)
 			else:
 				print("Une erreur s'est produite : "+str(e))
-		
+
 		if last_page is False:
 			#If we aren't on the last page (first call of the method), we extract the number of last one
 			last = None
 			for link in json_obj["links"]:
 				if link["type"] == "last":
 					parameters = urllib.parse.parse_qs(urllib.parse.urlsplit(link["href"]).query)
-					last = parameters.get("start_page")
+					last = parameters.get("last")
 			if last == None:
 				#No last page : just one element, send back the object
 				return json_obj
@@ -61,6 +61,7 @@ class tools(object):
 				return self._browse_disruptions(url,last_page=last[0])
 		else:
 			#We are on the last (most recent) disruption, we just send it back
+			#print(json.dumps(json_obj, indent=4))
 			return json_obj
 
 	def get_disruptions(self,num_train,second_try=False):

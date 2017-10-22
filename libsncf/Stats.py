@@ -118,7 +118,7 @@ class stats(object):
 			if self._canceled_trip_count > 0:
 				canceled_block = "dont {} suppressions, ".format(self._canceled_trip_count)
 
-			output = "@SNCF #train {} perturbé {} fois {}, {}retard moyen de {} minutes, ponctualité de {}%, {}".format(self._num_train,
+			output = "@SNCFTERAURA #train {} perturbé {} fois {}, {}retard moyen de {} minutes, ponctualité de {}%, {}".format(self._num_train,
 				self._disrupted_trip_count,
 				range_word,
 				canceled_block,
@@ -126,7 +126,7 @@ class stats(object):
 				punctuality_rate,
 				adjective)
 		else:
-			output = emoji.emojize("@SNCF le #train {} n'a pas été perturbé {} :tada: Pourvu que ça dure...".format(self._num_train, range_word),use_aliases=True)
+			output = emoji.emojize("@SNCFTERAURA le #train {} n'a pas été perturbé {} :tada: Pourvu que ça dure...".format(self._num_train, range_word),use_aliases=True)
 
 		return output
 

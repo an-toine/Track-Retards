@@ -33,9 +33,9 @@ class twitter(object):
 		message = ""
 		#Define the pattern of messages to send to our beloved SNCF
 		if type(event) is delay:
-			message = "@SNCF, mon #train {} {}/{} était en #retard de {} minutes, une explication? #TER @auvergnerhalpes".format(event.num_train,event.departure_city,event.arrival_city,event.get_delay(in_minutes=True))
+			message = "@SNCFTERAURA, mon #train {} {}/{} était en #retard de {} minutes, une explication? #TER @auvergnerhalpes".format(event.num_train,event.departure_city,event.arrival_city,event.get_delay(in_minutes=True))
 		else:
-			message = "@SNCF, mon #train {} {}/{} était #supprimé, une explication? #TER @auvergnerhalpes".format(event.num_train,event.departure_city,event.arrival_city)
+			message = "@SNCFTERAURA, mon #train {} {}/{} était #supprimé, une explication? #TER @auvergnerhalpes".format(event.num_train,event.departure_city,event.arrival_city)
 		#Publish the message
 		self._post(message)
 

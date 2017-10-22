@@ -12,7 +12,15 @@ _db = MySQLDatabase(None)
 class mysql(object):
 	def __init__(self, settings, tools):
 		_db.init(settings.mysql["mysql_db"], host=settings.mysql["mysql_host"], port=settings.mysql["mysql_port"], user=settings.mysql["mysql_user"], passwd=settings.mysql["mysql_password"])
-		_db.connect()
+		try:
+			_db.connect()
+		except OperationalError:
+			print("Connexion impossible au serveur MySQL {}:{}/{} avec le user {}".format(
+				settings.mysql["mysql_host"],
+				settings.mysql["mysql_port"],
+				settings.mysql["mysql_db"],
+				settings.mysql["mysql_user"]))
+			exit(1)
 		_db.create_tables([train, disruption, city, trip],safe=True)
 		self._tools = tools
 
@@ -34,6 +42,7 @@ class mysql(object):
 			departure_datetime = item.get_departure_datetime()
 			arrival_datetime = item.get_base_arrival_datetime()
 			trip_entity = trip.get_or_create(trip_departure_date=departure_datetime,trip_arrival_date=arrival_datetime,trip_train=train_entity,trip_departure_city=departure_city_entity,trip_arrival_city=arrival_city_entity,trip_disruption=disruption_entity)
+
 		elif type(item) is canceled:
 			train_entity, nb_lines = train.get_or_create(id_train=item.num_train)
 			disruption_entity = disruption.create(disruption_type="Canceled",disruption_cause=item.cause,disruption_delay=None)
@@ -62,7 +71,6 @@ class mysql(object):
 				& ((trip.trip_arrival_date < stats_object.end_range)
 				| (trip.trip_arrival_date.is_null(True))))
 			.count())
-		
 		#Quick check to avoid division by zero later
 		if stats_object.trip_count == 0:
 			print("Il n'y a pas assez de données pour le train {}. Le calcul des statistiques est impossible.".format(stats_object.num_train))
@@ -78,7 +86,8 @@ class mysql(object):
 				| (trip.trip_arrival_date.is_null(True)))
 				& (trip.trip_disruption.is_null(False)))
 			.count())
-		#Number of canceled Trains
+		
+                #Number of canceled Trains
 		stats_object.canceled_trip_count = (trip
 			.select()
 			.join(train)
@@ -86,7 +95,8 @@ class mysql(object):
 				& (trip.trip_departure_date > stats_object.start_range)
 				& (trip.trip_arrival_date.is_null(True)))
 			.count())
-		#Fetch the number of normal trips on this date range
+		
+                #Fetch the number of normal trips on this date range
 		stats_object.normal_trip_count = (trip
 			.select()
 			.join(train)
@@ -96,6 +106,7 @@ class mysql(object):
 				| (trip.trip_arrival_date.is_null(True)))
 				& (trip.trip_disruption.is_null(True)))
 			.count())
+
 		#Last on this date range
 		stats_object.last_trip_count = (trip
 			.select()

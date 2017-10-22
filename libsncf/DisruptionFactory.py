@@ -16,9 +16,14 @@ class disruptionFactory(object):
 		self._object_tools = object_tools
 		#There should be just one disruption, but just in case, we loop on it
 		for disruption in response["disruptions"]:
+			if "impacted_stops" in disruption["impacted_objects"][0]:
+				for impact in disruption["impacted_objects"][0]["impacted_stops"]:
+					if impact["arrival_status"] == "deleted":
+						self._canceled_train = True
 			#If the effect of the disruption on the train is "NO_SERVICE", the train is canceled
-			if disruption["severity"]["effect"] == "NO_SERVICE":
-				self._canceled_train = True
+			elif "effect" in disruption["severity"]:
+				if disruption["severity"]["effect"] == "NO_SERVICE":
+					self._canceled_train = True
 
 	@property
 	def canceled_train(self):

@@ -50,7 +50,7 @@ if __name__ == '__main__':
 	object_tools = tools(settings)
 
 	#If stats must be displayed
-	if(results.show_stats):
+	if(results.show_stats and not mysql_not_available):
 		mysql_service = mysql(settings, object_tools)
 		if results.monthly_stats:
 			stats_object = stats("MONTHLY", num_train)
@@ -100,7 +100,7 @@ if __name__ == '__main__':
 			#If MySQL is not canceled by the user, and the import of required modules succeeded
 			if(not results.no_mysql and not mysql_not_available):
 				#Instanciate a MySQL object with settings
-				mysql_service = mysql(settings, tools)
+				mysql_service = mysql(settings, object_tools)
 				mysql_service.save_normal_trip(num_train)
 				mysql_service.close_connection()
 			exit(0)
@@ -123,6 +123,6 @@ if __name__ == '__main__':
 	#If MySQL is not canceled by the user, and the import of required modules succeeded
 	if(not results.no_mysql and not mysql_not_available):
 		#Instanciate a MySQL object with settings
-		mysql_service = mysql(settings, tools)
+		mysql_service = mysql(settings, object_tools)
 		mysql_service.save_item(event)
 		mysql_service.close_connection()

@@ -21,14 +21,14 @@ Pour accéder à l'API de la SNCF, un token doit être obtenu. L'inscription peu
 
 Le code d'accès est alors envoyé par e-mail, et doit être renseigné dans le fichier de configuration à la ligne `token` de la section **SNCF**
 
-###Accès à l'API Twitter
+### Accès à l'API Twitter
 Afin de publier les retards des trains sur Twitter, il est également nécessaire de disposer de tokens d'accès.
 
 Le plus facile est de créer un compte dédié pour publier ces retards, et de suivre cette [documentation](https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04#step-2-%E2%80%94-create-your-twitter-application) pour obtenir vos accès.
 
 Les identifiants doivent être complétés dans la section **Twitter** du fichier de configuration.
 
-###Accès à l'API Google Sheets
+### Accès à l'API Google Sheets
 La publication des retards dans une feuille de calcul Google est également disponible pour bénéficier d'un suivi plus précis des retards.
 
 Dans un premier temps, créer une feuille de calcul avec pour première ligne les en-têtes du document. Ceux-ci doivent être dans cet ordre :
@@ -50,7 +50,7 @@ Il est alors possible de définir à la ligne `secret_file` le nom et l'emplacem
 
 À la première utilisation du script, une connexion au compte Google est demandée. Les paramètres d'accès sont alors stockés dans le fichier défini à la ligne `credentials_file` du fichier `retards.cfg`.
 
-###Stockage des données dans MySQL
+### Stockage des données dans MySQL
 Si le module `peewee` est installé, il est possible de stocker dans une base de données des informations sur la ponctualité des trains et d'afficher des rapports détaillés sur ceux-ci.
 
 La configuration de ce module de sortie se fait dans le fichier `retards.cfg`, dans la section **MySQL**. Les options suivantes doivent être complétées :
@@ -70,9 +70,9 @@ La configuration de ce module de sortie se fait dans le fichier `retards.cfg`, d
 
 Ces tables sont alors alimentées à chaque utilisation du programme, même si le train n'a pas rencontré de difficulté sur son trajet.
 
-##Utilisation
+## Utilisation
 
-###Options courantes
+### Options courantes
 
     ./retards.py --help
     usage: retards.py [-h] [--config CONFIG] [--show-stats] [--weekly] [--monthly]
@@ -96,7 +96,7 @@ Ces tables sont alors alimentées à chaque utilisation du programme, même si l
       --no-mysql          Ne pas envoyer les données sur MySQL
       --version           show program's version number and exit
 
-###Récupérer le dernier retard d'un train
+### Récupérer le dernier retard d'un train
 
     ./retards.py 17990
     Train numero 17990 Lyon-Part-Dieu => Annecy
@@ -106,7 +106,7 @@ Ces tables sont alors alimentées à chaque utilisation du programme, même si l
     Retard : 0:20:00
     Cause : Indisponibilité d'un matériel
 
-###Récupérer le dernier retard d'un train, sans partager les données
+### Récupérer le dernier retard d'un train, sans partager les données
 
     ./retards.py --no-twitter --no-google-sheets --no-mysql 17990
     Train numero 17990 Lyon-Part-Dieu => Annecy
@@ -116,7 +116,7 @@ Ces tables sont alors alimentées à chaque utilisation du programme, même si l
     Retard : 0:20:00
     Cause : Indisponibilité d'un matériel
 
-###Récupérer le dernier retard d'un train, en spécifiant un fichier de configuration alternatif
+### Récupérer le dernier retard d'un train, en spécifiant un fichier de configuration alternatif
 
     ./retards.py --config /home/robert/config/retards.cfg 17990
     Train numero 17990 Lyon-Part-Dieu => Annecy
@@ -126,12 +126,12 @@ Ces tables sont alors alimentées à chaque utilisation du programme, même si l
     Retard : 0:20:00
     Cause : Indisponibilité d'un matériel
 
-###Statistiques
+### Statistiques
 
 Note : pour utiliser au mieux cette fonctionnalité, il est nécessaire de disposer du plus de données possible pour un train.
 Il est donc conseillé d'exécuter de manière quotidienne ce programme (avec un outil comme `cron` par exemple) pour enregistrer chaque jour les évènements qui ont pu se produire sur le trajet.
 
-####Afficher les statistiques de ponctualité d'un train pour la semaine, sans envoyer de message sur Twitter
+#### Afficher les statistiques de ponctualité d'un train pour la semaine, sans envoyer de message sur Twitter
 
     ./retards.py --no-twitter --show-stats --weekly 886739
     Du 06/03/2017 au 12/03/2017, le train 886739 a été perturbé 2 voyages sur 4, soit un taux de ponctualité de 50.0%, en hausse par rapport à la periode précédente (3 perturbations, 50.0%, de ponctualité).
@@ -143,7 +143,7 @@ Il est donc conseillé d'exécuter de manière quotidienne ce programme (avec un
     * Réutilisation d'un train : 1 problème
     * Train en panne : 1 problème
 
-####Afficher les statistiques de ponctualité d'un train pour le mois, sans envoyer de message sur Twitter
+#### Afficher les statistiques de ponctualité d'un train pour le mois, sans envoyer de message sur Twitter
 
     ./retards.py --no-twitter --show-stats --monthly 886739
     Du 01/03/2017 au 31/03/2017, le train 886739 a été perturbé 2 voyages sur 7, soit un taux de ponctualité de 71.43%, en hausse par rapport à la periode précédente (11 perturbations, 47.62%, de ponctualité).
@@ -155,7 +155,7 @@ Il est donc conseillé d'exécuter de manière quotidienne ce programme (avec un
     * Train en panne : 1 problème
     * Réutilisation d'un train : 1 problème
 
-####Afficher les statistiques de ponctualité d'un train pour le mois, et envoyer un message sur Twitter
+#### Afficher les statistiques de ponctualité d'un train pour le mois, et envoyer un message sur Twitter
 
     ./retards.py --no-twitter --show-stats --monthly 886739
     Du 01/03/2017 au 31/03/2017, le train 886739 a été perturbé 2 voyages sur 7, soit un taux de ponctualité de 71.43%, en hausse par rapport à la periode précédente (11 perturbations, 47.62%, de ponctualité).
@@ -167,11 +167,11 @@ Il est donc conseillé d'exécuter de manière quotidienne ce programme (avec un
     * Train en panne : 1 problème
     * Réutilisation d'un train : 1 problème
 
-###Compte Twitter de démonstration
+### Compte Twitter de démonstration
 
 Le compte Twitter [@RALeBot](https://twitter.com/RALeBot) suit les trains TER 886811 et 886739 et permet de voir des exemples de messages qui peuvent être publiés.
 
-##Tests du code
+## Tests du code
 
 Pour controler les modifications apportées au code, des tests unitaires ont été écrits dans le fichier `tests.py`.
 Leur réalisation nécessite l'installation des modules python `unittest` et `tornado`.
@@ -183,7 +183,7 @@ Pour pouvoir disposer de deux situations de test, les réponses renvoyées par l
 
 Ces réponses sont adaptées à la date de réalisation des tests, et envoyées par un serveur Tornado situé dans le script `test_server/server.py`.
 
-###Réalisation des tests
+### Réalisation des tests
 
 Modifier l'option `server_name` de la section **SNCF** pour y définir la valeur `http://127.0.0.1:8080/`.
 
