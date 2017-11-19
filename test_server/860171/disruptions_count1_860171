@@ -1,0 +1,248 @@
+{
+  "disruptions": [
+    {
+      "disruption_id": "73aaeb24-3fa6-45c2-a193-419ced3142c2",
+      "status": "past",
+      "severity": {
+        "color": "#000000",
+        "priority": 42,
+        "name": "trip delayed",
+        "effect": "SIGNIFICANT_DELAYS"
+      },
+      "impact_id": "73aaeb24-3fa6-45c2-a193-419ced3142c2",
+      "application_periods": [
+        {
+          "begin": "20171113T200000",
+          "end": "20171113T214959"
+        }
+      ],
+      "updated_at": "20171117T225151",
+      "uri": "73aaeb24-3fa6-45c2-a193-419ced3142c2",
+      "impacted_objects": [
+        {
+          "impacted_stops": [
+            {
+              "amended_arrival_time": "200000",
+              "stop_point": {
+                "name": "Tours",
+                "links": [],
+                "coord": {
+                  "lat": "47.389815",
+                  "lon": "0.693508"
+                },
+                "label": "Tours (Tours)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87571000"
+              },
+              "stop_time_effect": "unchanged",
+              "departure_status": "unchanged",
+              "amended_departure_time": "200000",
+              "base_arrival_time": "200000",
+              "cause": "",
+              "base_departure_time": "200000",
+              "arrival_status": "unchanged"
+            },
+            {
+              "amended_arrival_time": "201300",
+              "stop_point": {
+                "name": "Cinq-Mars",
+                "links": [],
+                "coord": {
+                  "lat": "47.344793",
+                  "lon": "0.460079"
+                },
+                "label": "Cinq-Mars (Cinq-Mars-la-Pile)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87571836"
+              },
+              "stop_time_effect": "unchanged",
+              "departure_status": "unchanged",
+              "amended_departure_time": "201400",
+              "base_arrival_time": "201300",
+              "cause": "",
+              "base_departure_time": "201400",
+              "arrival_status": "unchanged"
+            },
+            {
+              "amended_arrival_time": "201700",
+              "stop_point": {
+                "name": "Langeais",
+                "links": [],
+                "coord": {
+                  "lat": "47.323945",
+                  "lon": "0.410327"
+                },
+                "label": "Langeais",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87571828"
+              },
+              "stop_time_effect": "unchanged",
+              "departure_status": "unchanged",
+              "amended_departure_time": "201800",
+              "base_arrival_time": "201700",
+              "cause": "",
+              "base_departure_time": "201800",
+              "arrival_status": "unchanged"
+            },
+            {
+              "amended_arrival_time": "203000",
+              "stop_point": {
+                "name": "Port-Boulet",
+                "links": [],
+                "coord": {
+                  "lat": "47.248528",
+                  "lon": "0.154871"
+                },
+                "label": "Port-Boulet (Chouzé-sur-Loire)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87571794"
+              },
+              "stop_time_effect": "delayed",
+              "departure_status": "delayed",
+              "amended_departure_time": "203600",
+              "base_arrival_time": "203000",
+              "cause": "",
+              "base_departure_time": "203100",
+              "arrival_status": "unchanged"
+            },
+            {
+              "amended_arrival_time": "204700",
+              "stop_point": {
+                "name": "Saumur",
+                "links": [],
+                "coord": {
+                  "lat": "47.268975",
+                  "lon": "-0.071427"
+                },
+                "label": "Saumur (Saumur)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87487603"
+              },
+              "stop_time_effect": "delayed",
+              "departure_status": "delayed",
+              "amended_departure_time": "205400",
+              "base_arrival_time": "204200",
+              "cause": "Travaux sur les voies",
+              "base_departure_time": "204900",
+              "arrival_status": "delayed"
+            },
+            {
+              "amended_arrival_time": "211000",
+              "stop_point": {
+                "name": "Montreuil-Bellay",
+                "links": [],
+                "coord": {
+                  "lat": "47.125326",
+                  "lon": "-0.148041"
+                },
+                "label": "Montreuil-Bellay (Montreuil-Bellay)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87487637"
+              },
+              "stop_time_effect": "delayed",
+              "departure_status": "delayed",
+              "amended_departure_time": "211100",
+              "base_arrival_time": "210500",
+              "cause": "Travaux sur les voies",
+              "base_departure_time": "210600",
+              "arrival_status": "delayed"
+            },
+            {
+              "amended_arrival_time": "212800",
+              "stop_point": {
+                "name": "Thouars",
+                "links": [],
+                "coord": {
+                  "lat": "46.985248",
+                  "lon": "-0.210516"
+                },
+                "label": "Thouars (Thouars)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87487009"
+              },
+              "stop_time_effect": "delayed",
+              "departure_status": "delayed",
+              "amended_departure_time": "212900",
+              "base_arrival_time": "212300",
+              "cause": "Travaux sur les voies",
+              "base_departure_time": "212400",
+              "arrival_status": "delayed"
+            },
+            {
+              "amended_arrival_time": "215000",
+              "stop_point": {
+                "name": "Bressuire",
+                "links": [],
+                "coord": {
+                  "lat": "46.837166",
+                  "lon": "-0.496493"
+                },
+                "label": "Bressuire (Bressuire)",
+                "equipments": [],
+                "id": "stop_point:OCE:SP:TrainTER-87487249"
+              },
+              "stop_time_effect": "delayed",
+              "departure_status": "delayed",
+              "amended_departure_time": "215000",
+              "base_arrival_time": "214500",
+              "cause": "Travaux sur les voies",
+              "base_departure_time": "214500",
+              "arrival_status": "delayed"
+            }
+          ],
+          "pt_object": {
+            "embedded_type": "trip",
+            "id": "OCE:SN860171F01005",
+            "quality": 0,
+            "name": "OCE:SN860171F01005",
+            "trip": {
+              "id": "OCE:SN860171F01005",
+              "name": "860171"
+            }
+          }
+        }
+      ],
+      "id": "73aaeb24-3fa6-45c2-a193-419ced3142c2",
+      "contributor": "amq.gen-xPsQAon5txCbwevbhmtUMA",
+      "cause": "",
+      "disruption_uri": "73aaeb24-3fa6-45c2-a193-419ced3142c2"
+    }
+  ],
+  "pagination": {
+    "start_page": 0,
+    "items_on_page": 1,
+    "items_per_page": 1,
+    "total_result": 3
+  },
+  "links": [
+    {
+      "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruptions.id}",
+      "type": "disruptions",
+      "rel": "disruptions",
+      "templated": true
+    },
+    {
+      "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trip.id}",
+      "type": "trip",
+      "rel": "trips",
+      "templated": true
+    },
+    {
+      "href": "https://api.sncf.com/v1/coverage/sncf/stop_points/{stop_point.id}",
+      "type": "stop_point",
+      "rel": "stop_points",
+      "templated": true
+    },
+    {
+      "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?headsign=860171",
+      "type": "first",
+      "templated": false
+    },
+    {
+        "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?start_page=1.0",
+        "type": "last",
+        "templated": false
+    }
+  ],
+  "feed_publishers": []
+}

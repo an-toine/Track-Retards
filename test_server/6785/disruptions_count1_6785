@@ -1,0 +1,190 @@
+{
+    "disruptions": [
+        {
+            "disruption_id": "57a89191-19de-4035-8d08-cc010e2a893c",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "57a89191-19de-4035-8d08-cc010e2a893c",
+            "application_periods": [
+                {
+                    "begin": "20171111T165300",
+                    "end": "20171111T193559"
+                }
+            ],
+            "updated_at": "20171117T224932",
+            "uri": "57a89191-19de-4035-8d08-cc010e2a893c",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "165300",
+                            "stop_point": {
+                                "name": "Paris-Gare-de-Lyon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.844924",
+                                    "lon": "2.373481"
+                                },
+                                "label": "Paris-Gare-de-Lyon (Paris)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TGV-87686006"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "165300",
+                            "base_arrival_time": "165300",
+                            "cause": "",
+                            "base_departure_time": "165300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "180200",
+                            "stop_point": {
+                                "name": "Montbard",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.618707",
+                                    "lon": "4.336156"
+                                },
+                                "label": "Montbard (Montbard)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TGV-87713131"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "180500",
+                            "base_arrival_time": "175700",
+                            "cause": "",
+                            "base_departure_time": "180000",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "184400",
+                            "stop_point": {
+                                "name": "Dijon-Ville",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.323392",
+                                    "lon": "5.027278"
+                                },
+                                "label": "Dijon-Ville (Dijon)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TGV-87713040"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "185600",
+                            "base_arrival_time": "183400",
+                            "cause": "R\u00e9gulation du trafic",
+                            "base_departure_time": "184600",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "192000",
+                            "stop_point": {
+                                "name": "Beaune",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.02303",
+                                    "lon": "4.848722"
+                                },
+                                "label": "Beaune (Beaune)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TGV-87713545"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "192000",
+                            "base_arrival_time": "191000",
+                            "cause": "R\u00e9gulation du trafic",
+                            "base_departure_time": "191200",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "193600",
+                            "stop_point": {
+                                "name": "Chalon-sur-Sa\u00f4ne",
+                                "links": [],
+                                "coord": {
+                                    "lat": "46.781561",
+                                    "lon": "4.843487"
+                                },
+                                "label": "Chalon-sur-Sa\u00f4ne (Chalon-sur-Sa\u00f4ne)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:TGV-87725002"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "194100",
+                            "base_arrival_time": "193100",
+                            "cause": "R\u00e9gulation du trafic",
+                            "base_departure_time": "193100",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN006785F02007",
+                        "quality": 0,
+                        "name": "OCE:SN006785F02007",
+                        "trip": {
+                            "id": "OCE:SN006785F02007",
+                            "name": "6785"
+                        }
+                    }
+                }
+            ],
+            "id": "57a89191-19de-4035-8d08-cc010e2a893c",
+            "contributor": "amq.gen-qOCp4cwSunoLGBDffKMsFw",
+            "cause": "",
+            "disruption_uri": "57a89191-19de-4035-8d08-cc010e2a893c"
+        }
+    ],
+    "pagination": {
+        "start_page": 0,
+        "items_on_page": 1,
+        "items_per_page": 1,
+        "total_result": 2
+    },
+    "links": [
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruptions.id}",
+            "type": "disruptions",
+            "rel": "disruptions",
+            "templated": true
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trip.id}",
+            "type": "trip",
+            "rel": "trips",
+            "templated": true
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/stop_points/{stop_point.id}",
+            "type": "stop_point",
+            "rel": "stop_points",
+            "templated": true
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?count=1&start_page=1&headsign=6785",
+            "type": "next",
+            "templated": false
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?count=1&start_page=1&headsign=6785",
+            "type": "last",
+            "templated": false
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?count=1&headsign=6785",
+            "type": "first",
+            "templated": false
+        }
+    ],
+    "feed_publishers": []
+}

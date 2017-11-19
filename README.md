@@ -178,8 +178,8 @@ Leur réalisation nécessite l'installation des modules python `unittest` et `to
 
 Pour pouvoir disposer de deux situations de test, les réponses renvoyées par l'API de la SNCF ont été sauvegardées dans deux répertoires distincts du dossier `test_server` du projet :
 
- * Le train 889951, qui est supprimé,
- * Le train 96559, en retard de 10 minutes
+ * Le train 860171, qui est supprimé,
+ * Les trains 13020 et 6785, en retard de 40 et 15 minutes.
 
 Ces réponses sont adaptées à la date de réalisation des tests, et envoyées par un serveur Tornado situé dans le script `test_server/server.py`.
 

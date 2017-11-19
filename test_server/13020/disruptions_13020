@@ -1,0 +1,1692 @@
+{
+    "disruptions": [
+        {
+            "disruption_id": "b8c9174b-7058-4453-8b38-597d91296817",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "b8c9174b-7058-4453-8b38-597d91296817",
+            "application_periods": [
+                {
+                    "begin": "20171117T090000",
+                    "end": "20171117T115259"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "b8c9174b-7058-4453-8b38-597d91296817",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "091500",
+                            "base_arrival_time": "090000",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "092800",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "093000",
+                            "base_arrival_time": "091300",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "091500",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "095400",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "095600",
+                            "base_arrival_time": "093900",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "094100",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "102100",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "102100",
+                            "base_arrival_time": "100600",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "100800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "104100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "104300",
+                            "base_arrival_time": "104100",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "104300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "111100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "111200",
+                            "base_arrival_time": "111100",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "111200",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "114000",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "114800",
+                            "base_arrival_time": "114000",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "114800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "115300",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "120800",
+                            "base_arrival_time": "115300",
+                            "cause": "Sortie tardive du d\u00e9p\u00f4t",
+                            "base_departure_time": "115300",
+                            "arrival_status": "unchanged"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "b8c9174b-7058-4453-8b38-597d91296817",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "b8c9174b-7058-4453-8b38-597d91296817"
+        },
+        {
+            "disruption_id": "cd30bc0d-0255-46dd-b26b-f8e84c903d76",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "cd30bc0d-0255-46dd-b26b-f8e84c903d76",
+            "application_periods": [
+                {
+                    "begin": "20171110T090000",
+                    "end": "20171110T115759"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "cd30bc0d-0255-46dd-b26b-f8e84c903d76",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "090000",
+                            "base_arrival_time": "090000",
+                            "cause": "",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "091300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "091500",
+                            "base_arrival_time": "091300",
+                            "cause": "",
+                            "base_departure_time": "091500",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "093900",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "094100",
+                            "base_arrival_time": "093900",
+                            "cause": "",
+                            "base_departure_time": "094100",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "100600",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "100800",
+                            "base_arrival_time": "100600",
+                            "cause": "Panne d'un passage \u00e0 niveau",
+                            "base_departure_time": "100800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "104100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "104300",
+                            "base_arrival_time": "104100",
+                            "cause": "Panne d'un passage \u00e0 niveau",
+                            "base_departure_time": "104300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "111100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "111200",
+                            "base_arrival_time": "111100",
+                            "cause": "Panne d'un passage \u00e0 niveau",
+                            "base_departure_time": "111200",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "114000",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115300",
+                            "base_arrival_time": "114000",
+                            "cause": "Panne d'un passage \u00e0 niveau",
+                            "base_departure_time": "114800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "115800",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115800",
+                            "base_arrival_time": "115300",
+                            "cause": "Panne d'un passage \u00e0 niveau",
+                            "base_departure_time": "115300",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "cd30bc0d-0255-46dd-b26b-f8e84c903d76",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "cd30bc0d-0255-46dd-b26b-f8e84c903d76"
+        },
+        {
+            "disruption_id": "80d4dae5-3994-41e6-b06b-76325a4c8c68",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "80d4dae5-3994-41e6-b06b-76325a4c8c68",
+            "application_periods": [
+                {
+                    "begin": "20171108T090000",
+                    "end": "20171108T115759"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "80d4dae5-3994-41e6-b06b-76325a4c8c68",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "090000",
+                            "base_arrival_time": "090000",
+                            "cause": "",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "091300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "091500",
+                            "base_arrival_time": "091300",
+                            "cause": "",
+                            "base_departure_time": "091500",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "093900",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "094100",
+                            "base_arrival_time": "093900",
+                            "cause": "",
+                            "base_departure_time": "094100",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "100600",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "100800",
+                            "base_arrival_time": "100600",
+                            "cause": "",
+                            "base_departure_time": "100800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "104100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "104300",
+                            "base_arrival_time": "104100",
+                            "cause": "",
+                            "base_departure_time": "104300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "111100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "111200",
+                            "base_arrival_time": "111100",
+                            "cause": "",
+                            "base_departure_time": "111200",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "114500",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115300",
+                            "base_arrival_time": "114000",
+                            "cause": "",
+                            "base_departure_time": "114800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "115800",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115800",
+                            "base_arrival_time": "115300",
+                            "cause": "",
+                            "base_departure_time": "115300",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "80d4dae5-3994-41e6-b06b-76325a4c8c68",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "80d4dae5-3994-41e6-b06b-76325a4c8c68"
+        },
+        {
+            "disruption_id": "ebe5c5da-8b7b-424e-b149-1bb1eb4d58af",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "ebe5c5da-8b7b-424e-b149-1bb1eb4d58af",
+            "application_periods": [
+                {
+                    "begin": "20171114T090000",
+                    "end": "20171114T115759"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "ebe5c5da-8b7b-424e-b149-1bb1eb4d58af",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "090000",
+                            "base_arrival_time": "090000",
+                            "cause": "",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "091300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "091500",
+                            "base_arrival_time": "091300",
+                            "cause": "",
+                            "base_departure_time": "091500",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "093900",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "094100",
+                            "base_arrival_time": "093900",
+                            "cause": "",
+                            "base_departure_time": "094100",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "100600",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "100800",
+                            "base_arrival_time": "100600",
+                            "cause": "",
+                            "base_departure_time": "100800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "104100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "104300",
+                            "base_arrival_time": "104100",
+                            "cause": "",
+                            "base_departure_time": "104300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "111100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "111200",
+                            "base_arrival_time": "111100",
+                            "cause": "",
+                            "base_departure_time": "111200",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "114000",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115300",
+                            "base_arrival_time": "114000",
+                            "cause": "",
+                            "base_departure_time": "114800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "115800",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115800",
+                            "base_arrival_time": "115300",
+                            "cause": "",
+                            "base_departure_time": "115300",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "ebe5c5da-8b7b-424e-b149-1bb1eb4d58af",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "ebe5c5da-8b7b-424e-b149-1bb1eb4d58af"
+        },
+        {
+            "disruption_id": "e310b5a3-c246-4889-bf30-028daa1f848d",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "e310b5a3-c246-4889-bf30-028daa1f848d",
+            "application_periods": [
+                {
+                    "begin": "20171116T090000",
+                    "end": "20171116T115759"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "e310b5a3-c246-4889-bf30-028daa1f848d",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "090000",
+                            "base_arrival_time": "090000",
+                            "cause": "",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "091300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "092000",
+                            "base_arrival_time": "091300",
+                            "cause": "",
+                            "base_departure_time": "091500",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "094400",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "094600",
+                            "base_arrival_time": "093900",
+                            "cause": "",
+                            "base_departure_time": "094100",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "101100",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "101300",
+                            "base_arrival_time": "100600",
+                            "cause": "",
+                            "base_departure_time": "100800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "104100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "104300",
+                            "base_arrival_time": "104100",
+                            "cause": "",
+                            "base_departure_time": "104300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "111100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "111200",
+                            "base_arrival_time": "111100",
+                            "cause": "",
+                            "base_departure_time": "111200",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "114500",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115300",
+                            "base_arrival_time": "114000",
+                            "cause": "",
+                            "base_departure_time": "114800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "115800",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115800",
+                            "base_arrival_time": "115300",
+                            "cause": "",
+                            "base_departure_time": "115300",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "e310b5a3-c246-4889-bf30-028daa1f848d",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "e310b5a3-c246-4889-bf30-028daa1f848d"
+        },
+        {
+            "disruption_id": "e022d8e5-3352-4cd7-82da-0959f9de7cdd",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "e022d8e5-3352-4cd7-82da-0959f9de7cdd",
+            "application_periods": [
+                {
+                    "begin": "20171113T090000",
+                    "end": "20171113T120259"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "e022d8e5-3352-4cd7-82da-0959f9de7cdd",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "090000",
+                            "base_arrival_time": "090000",
+                            "cause": "",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "091300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "091500",
+                            "base_arrival_time": "091300",
+                            "cause": "",
+                            "base_departure_time": "091500",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "093900",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "094100",
+                            "base_arrival_time": "093900",
+                            "cause": "",
+                            "base_departure_time": "094100",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "100600",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "100800",
+                            "base_arrival_time": "100600",
+                            "cause": "",
+                            "base_departure_time": "100800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "104100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "104300",
+                            "base_arrival_time": "104100",
+                            "cause": "",
+                            "base_departure_time": "104300",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "111100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "111200",
+                            "base_arrival_time": "111100",
+                            "cause": "",
+                            "base_departure_time": "111200",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "114500",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115800",
+                            "base_arrival_time": "114000",
+                            "cause": "Travaux sur les voies",
+                            "base_departure_time": "114800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "120300",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "120300",
+                            "base_arrival_time": "115300",
+                            "cause": "Travaux sur les voies",
+                            "base_departure_time": "115300",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "e022d8e5-3352-4cd7-82da-0959f9de7cdd",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "e022d8e5-3352-4cd7-82da-0959f9de7cdd"
+        },
+        {
+            "disruption_id": "3272875d-20ce-45dd-a271-e6eb8bf0aef7",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "3272875d-20ce-45dd-a271-e6eb8bf0aef7",
+            "application_periods": [
+                {
+                    "begin": "20171109T090000",
+                    "end": "20171109T115259"
+                }
+            ],
+            "updated_at": "20171117T225057",
+            "uri": "3272875d-20ce-45dd-a271-e6eb8bf0aef7",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "090000",
+                            "base_arrival_time": "090000",
+                            "cause": "",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "091300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "091500",
+                            "base_arrival_time": "091300",
+                            "cause": "",
+                            "base_departure_time": "091500",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "093900",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "094100",
+                            "base_arrival_time": "093900",
+                            "cause": "",
+                            "base_departure_time": "094100",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "100600",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "100800",
+                            "base_arrival_time": "100600",
+                            "cause": "Panne d'un aiguillage",
+                            "base_departure_time": "100800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "105100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "105300",
+                            "base_arrival_time": "104100",
+                            "cause": "Panne d'un aiguillage",
+                            "base_departure_time": "104300",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "112100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "112200",
+                            "base_arrival_time": "111100",
+                            "cause": "Panne d'un aiguillage",
+                            "base_departure_time": "111200",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "114000",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "unchanged",
+                            "departure_status": "unchanged",
+                            "amended_departure_time": "114800",
+                            "base_arrival_time": "114000",
+                            "cause": "Panne d'un aiguillage",
+                            "base_departure_time": "114800",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "115300",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "120300",
+                            "base_arrival_time": "115300",
+                            "cause": "Panne d'un aiguillage",
+                            "base_departure_time": "115300",
+                            "arrival_status": "unchanged"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "3272875d-20ce-45dd-a271-e6eb8bf0aef7",
+            "contributor": "amq.gen-Lvzgvhj0MZyxRHTX4lC0tw",
+            "cause": "",
+            "disruption_uri": "3272875d-20ce-45dd-a271-e6eb8bf0aef7"
+        },
+        {
+            "disruption_id": "5f21bab0-af71-463d-8beb-b1490fc6902e",
+            "status": "past",
+            "severity": {
+                "color": "#000000",
+                "priority": 42,
+                "name": "trip delayed",
+                "effect": "SIGNIFICANT_DELAYS"
+            },
+            "impact_id": "5f21bab0-af71-463d-8beb-b1490fc6902e",
+            "application_periods": [
+                {
+                    "begin": "{{date_begin_application}}",
+                    "end": "{{date_end_application}}"
+                }
+            ],
+            "updated_at": "{{date_updated_at}}",
+            "uri": "5f21bab0-af71-463d-8beb-b1490fc6902e",
+            "impacted_objects": [
+                {
+                    "impacted_stops": [
+                        {
+                            "amended_arrival_time": "090000",
+                            "stop_point": {
+                                "name": "Caen",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.176551",
+                                    "lon": "-0.348254"
+                                },
+                                "label": "Caen (Caen)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "094000",
+                            "base_arrival_time": "090000",
+                            "cause": "Train en panne",
+                            "base_departure_time": "090000",
+                            "arrival_status": "unchanged"
+                        },
+                        {
+                            "amended_arrival_time": "100300",
+                            "stop_point": {
+                                "name": "M\u00e9zidon-Canon",
+                                "links": [],
+                                "coord": {
+                                    "lat": "49.070873",
+                                    "lon": "-0.07495300000000001"
+                                },
+                                "label": "M\u00e9zidon-Canon",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444208"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "100500",
+                            "base_arrival_time": "091300",
+                            "cause": "Train en panne",
+                            "base_departure_time": "091500",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "102900",
+                            "stop_point": {
+                                "name": "Argentan",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.738466",
+                                    "lon": "-0.025711"
+                                },
+                                "label": "Argentan (Argentan)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444539"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "103100",
+                            "base_arrival_time": "093900",
+                            "cause": "Train en panne",
+                            "base_departure_time": "094100",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "105600",
+                            "stop_point": {
+                                "name": "Alen\u00e7on",
+                                "links": [],
+                                "coord": {
+                                    "lat": "48.433811",
+                                    "lon": "0.099062"
+                                },
+                                "label": "Alen\u00e7on (Alen\u00e7on)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87444711"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "105800",
+                            "base_arrival_time": "100600",
+                            "cause": "Train en panne",
+                            "base_departure_time": "100800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "112100",
+                            "stop_point": {
+                                "name": "Le Mans",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.995591",
+                                    "lon": "0.192152"
+                                },
+                                "label": "Le Mans (Le Mans)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396002"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "112300",
+                            "base_arrival_time": "104100",
+                            "cause": "Train en panne",
+                            "base_departure_time": "104300",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "115100",
+                            "stop_point": {
+                                "name": "Ch\u00e2teau-du-Loir",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.683283",
+                                    "lon": "0.414991"
+                                },
+                                "label": "Ch\u00e2teau-du-Loir",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87396606"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "115200",
+                            "base_arrival_time": "111100",
+                            "cause": "Train en panne",
+                            "base_departure_time": "111200",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "122000",
+                            "stop_point": {
+                                "name": "St-Pierre-des-Corps",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.385733",
+                                    "lon": "0.725056"
+                                },
+                                "label": "St-Pierre-des-Corps (Saint-Pierre-des-Corps)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571240"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "122800",
+                            "base_arrival_time": "114000",
+                            "cause": "Train en panne",
+                            "base_departure_time": "114800",
+                            "arrival_status": "delayed"
+                        },
+                        {
+                            "amended_arrival_time": "123300",
+                            "stop_point": {
+                                "name": "Tours",
+                                "links": [],
+                                "coord": {
+                                    "lat": "47.389815",
+                                    "lon": "0.693508"
+                                },
+                                "label": "Tours (Tours)",
+                                "equipments": [],
+                                "id": "stop_point:OCE:SP:CorailIntercit\u00e9-87571000"
+                            },
+                            "stop_time_effect": "delayed",
+                            "departure_status": "delayed",
+                            "amended_departure_time": "124300",
+                            "base_arrival_time": "115300",
+                            "cause": "Train en panne",
+                            "base_departure_time": "115300",
+                            "arrival_status": "delayed"
+                        }
+                    ],
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "id": "OCE:SN013020F02006",
+                        "quality": 0,
+                        "name": "OCE:SN013020F02006",
+                        "trip": {
+                            "id": "OCE:SN013020F02006",
+                            "name": "13020"
+                        }
+                    }
+                }
+            ],
+            "id": "5f21bab0-af71-463d-8beb-b1490fc6902e",
+            "contributor": "realtime.ire",
+            "cause": "",
+            "disruption_uri": "5f21bab0-af71-463d-8beb-b1490fc6902e"
+        }
+    ],
+    "pagination": {
+        "start_page": 0,
+        "items_on_page": 8,
+        "items_per_page": 25,
+        "total_result": 8
+    },
+    "links": [
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruptions.id}",
+            "type": "disruptions",
+            "rel": "disruptions",
+            "templated": true
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trip.id}",
+            "type": "trip",
+            "rel": "trips",
+            "templated": true
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/stop_points/{stop_point.id}",
+            "type": "stop_point",
+            "rel": "stop_points",
+            "templated": true
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?headsign=13020",
+            "type": "first",
+            "templated": false
+        }
+    ],
+    "feed_publishers": []
+}

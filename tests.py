@@ -29,13 +29,18 @@ class ToolsTest(unittest.TestCase):
 
 	#Test disruption downloading
 	def test_disruption(self):
-		disruption = self._object_tools.get_disruptions("889951")
-		self.assertEqual(disruption["disruptions"][0]["severity"]["name"],"trip canceled")
+		disruption = self._object_tools.get_disruptions("860171")
+		self.assertEqual(disruption["disruptions"][0]["severity"]["name"],"trip delayed")
 
 	#Test trip downloading
 	def test_trip(self):
-		trip = self._object_tools.get_trip("OCE:SN889951F05003")
-		self.assertEqual(trip["vehicle_journeys"][0]["stop_times"][11]["stop_point"]["name"],"St-Etienne-Châteaucreux")
+		trip = self._object_tools.get_trip("OCE:SN860171F01005")
+		self.assertEqual(trip["vehicle_journeys"][0]["stop_times"][7]["stop_point"]["name"],"Bressuire")
+
+	#Test conversion from headsign to trip id
+	def test_headsign_to_tripid(self):
+		trip_id = self._object_tools.headsign_to_tripid("860171")
+		self.assertEqual(trip_id,"OCE:SN860171F01005")
 
 #Test case for the Trip methods
 class TripTest(unittest.TestCase):
@@ -43,14 +48,14 @@ class TripTest(unittest.TestCase):
 	def setUp(self):
 		self._settings = settings("retards.cfg")
 		self._object_tools = tools(self._settings)
-		self._trip = trip(self._object_tools.get_trip("OCE:SN889951F05003"))
+		self._trip = trip(self._object_tools.get_trip("OCE:SN860171F01005"))
 
 	#Test Trip methods
 	def test_trip(self):
-		self.assertEqual(self._trip.departure_city,"Le Puy-en-Velay")
-		self.assertEqual(self._trip.arrival_city,"St-Etienne-Ch\u00e2teaucreux")
-		self.assertEqual(self._trip.departure,"043000")
-		self.assertEqual(self._trip.arrival,"060300")
+		self.assertEqual(self._trip.departure_city,"Tours")
+		self.assertEqual(self._trip.arrival_city,"Bressuire")
+		self.assertEqual(self._trip.departure,"200000")
+		self.assertEqual(self._trip.arrival,"214500")
 
 #Test case for the DisruptionsFactory methods
 class FactoryTest(unittest.TestCase):
@@ -58,23 +63,23 @@ class FactoryTest(unittest.TestCase):
 	def setUp(self):
 		self._settings = settings("retards.cfg")
 		self._object_tools = tools(self._settings)
-		self._train_delayed = self._object_tools.get_disruptions("96559")
-		self._train_canceled = self._object_tools.get_disruptions("889951")
+		self._train_delayed = self._object_tools.get_disruptions("6785", True)
+		self._train_canceled = self._object_tools.get_disruptions("860171", True)
 
 	#Test delayed trains
 	def test_delay(self):
-		factory = disruptionFactory(self._train_delayed,"96559",self._object_tools)
+		factory = disruptionFactory(self._train_delayed,"6785",self._object_tools)
 		event = factory.get_event()
 		#Check whether the event is of the correct type
 		self.assertIsInstance(event,delay)
 		#Control the delay in minutes
-		self.assertEqual(event.get_delay(in_minutes=True),"10")
+		self.assertEqual(event.get_delay(in_minutes=True),"15")
 
 	#Test canceled trains
 	def test_cancel(self):
-		factory = disruptionFactory(self._train_canceled,"889951",self._object_tools)
+		factory = disruptionFactory(self._train_canceled,"860171",self._object_tools)
 		event = factory.get_event()
 		#Check whether the event is of the correct type
 		self.assertIsInstance(event,canceled)
 		#Control the arrival city is correct
-		self.assertEqual(event.arrival_city,"St-Etienne-Ch\u00e2teaucreux")
+		self.assertEqual(event.arrival_city,"Bressuire")

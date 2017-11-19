@@ -1,0 +1,33 @@
+{
+  "disruptions": [],
+  "pagination": {
+    "start_page": 0,
+    "items_on_page": 2,
+    "items_per_page": 25,
+    "total_result": 2
+  },
+  "trips": [
+    {
+      "id": "OCE:SN860171F01005",
+      "name": "860171"
+    },
+    {
+      "id": "OCE:SN860171F01006",
+      "name": "860171"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trips.id}",
+      "type": "trips",
+      "rel": "trips",
+      "templated": true
+    },
+    {
+      "href": "https://api.sncf.com/v1/coverage/sncf/trips?headsign=860171",
+      "type": "first",
+      "templated": false
+    }
+  ],
+  "feed_publishers": []
+}
