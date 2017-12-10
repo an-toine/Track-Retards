@@ -1,0 +1,1155 @@
+{
+    "links": [
+        {
+            "templated": true,
+            "type": "stop_point",
+            "rel": "stop_points",
+            "href": "https://api.sncf.com/v1/coverage/sncf/stop_points/{stop_point.id}"
+        },
+        {
+            "templated": true,
+            "type": "journey_pattern",
+            "rel": "journey_patterns",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journey_patterns/{journey_pattern.id}"
+        },
+        {
+            "templated": true,
+            "type": "disruptions",
+            "rel": "disruptions",
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruptions.id}"
+        },
+        {
+            "templated": true,
+            "type": "disruption",
+            "rel": "disruptions",
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruption.id}"
+        },
+        {
+            "templated": true,
+            "type": "vehicle_journeys",
+            "rel": "vehicle_journeys",
+            "href": "https://api.sncf.com/v1/coverage/sncf/vehicle_journeys/{vehicle_journeys.id}"
+        },
+        {
+            "templated": true,
+            "type": "trip",
+            "rel": "trips",
+            "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trip.id}"
+        },
+        {
+            "type": "first",
+            "templated": false,
+            "href": "https://api.sncf.com/v1/coverage/sncf/trips/OCE:SN886263F01002/vehicle_journeys"
+        }
+    ],
+    "pagination": {
+        "items_on_page": 2,
+        "total_result": 2,
+        "start_page": 0,
+        "items_per_page": 25
+    },
+    "vehicle_journeys": [
+        {
+            "journey_pattern": {
+                "id": "journey_pattern:1969",
+                "name": "journey_pattern:1969"
+            },
+            "codes": [],
+            "id": "vehicle_journey:OCE:SN886263F01002",
+            "validity_pattern": {
+                "days": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100111110011111001111100111110011010",
+                "beginning_date": "20171030"
+            },
+            "disruptions": [
+                {
+                    "templated": false,
+                    "type": "disruption",
+                    "id": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+                    "rel": "disruptions",
+                    "internal": true
+                },
+                {
+                    "templated": false,
+                    "type": "disruption",
+                    "id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+                    "rel": "disruptions",
+                    "internal": true
+                },
+                {
+                    "templated": false,
+                    "type": "disruption",
+                    "id": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+                    "rel": "disruptions",
+                    "internal": true
+                }
+            ],
+            "name": "886263",
+            "calendars": [
+                {
+                    "id": null,
+                    "exceptions": [
+                        {
+                            "type": "remove",
+                            "datetime": "20171101"
+                        }
+                    ],
+                    "active_periods": [
+                        {
+                            "end": "20171209",
+                            "begin": "20171031"
+                        }
+                    ],
+                    "week_pattern": {
+                        "thursday": true,
+                        "wednesday": true,
+                        "sunday": false,
+                        "friday": true,
+                        "monday": true,
+                        "tuesday": true,
+                        "saturday": false
+                    }
+                }
+            ],
+            "stop_times": [
+                {
+                    "departure_time": "080800",
+                    "arrival_time": "080800",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.391639",
+                            "lon": "4.286432"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726729",
+                        "name": "Firminy",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Firminy (Firminy)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "081100",
+                    "arrival_time": "081100",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.394767",
+                            "lon": "4.322369"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726711",
+                        "name": "Le Chambon-Feugerolles",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Le Chambon-Feugerolles (Le Chambon-Feugerolles)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "081600",
+                    "arrival_time": "081500",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.403338",
+                            "lon": "4.358202"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726703",
+                        "name": "La Ricamarie",
+                        "equipments": [],
+                        "links": [],
+                        "label": "La Ricamarie (La Ricamarie)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "082000",
+                    "arrival_time": "081900",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.417197",
+                            "lon": "4.39266"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726190",
+                        "name": "St-Etienne-Bellevue",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-Bellevue (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "082300",
+                    "arrival_time": "082300",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.437095",
+                            "lon": "4.378405"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726174",
+                        "name": "St-Etienne-le-Clapier",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-le-Clapier (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "082600",
+                    "arrival_time": "082500",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.446813",
+                            "lon": "4.385386"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726901",
+                        "name": "St-Etienne-Carnot",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-Carnot (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "083400",
+                    "arrival_time": "082900",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.443376",
+                            "lon": "4.399999"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726000",
+                        "name": "St-Etienne-Ch\u00e2teaucreux",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-Ch\u00e2teaucreux (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "084300",
+                    "arrival_time": "084200",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.472517",
+                            "lon": "4.516987"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726307",
+                        "name": "St-Chamond",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Chamond (Saint-Chamond)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "085100",
+                    "arrival_time": "085000",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.524333",
+                            "lon": "4.606365"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726331",
+                        "name": "Rive-de-Gier",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Rive-de-Gier (Rive-de-Gier)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "090200",
+                    "arrival_time": "090100",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.585364",
+                            "lon": "4.766246"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722405",
+                        "name": "Givors-Ville",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Givors-Ville (Givors)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "090500",
+                    "arrival_time": "090400",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.595696",
+                            "lon": "4.772496"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722439",
+                        "name": "Givors-Canal",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Givors-Canal (Givors)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "090800",
+                    "arrival_time": "090700",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.607249",
+                            "lon": "4.796141"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722298",
+                        "name": "Grigny-Le Sablon",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Grigny-Le Sablon (Grigny)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "091300",
+                    "arrival_time": "091200",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.645639",
+                            "lon": "4.813279"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722264",
+                        "name": "Vernaison",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Vernaison (Vernaison)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "092000",
+                    "arrival_time": "091900",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.706902",
+                            "lon": "4.824989"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722231",
+                        "name": "Pierre-B\u00e9nite",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Pierre-B\u00e9nite (Pierre-B\u00e9nite)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "092300",
+                    "arrival_time": "092200",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.717209",
+                            "lon": "4.813132"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722207",
+                        "name": "Oullins",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Oullins (Oullins)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "092800",
+                    "arrival_time": "092800",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.748488",
+                            "lon": "4.825751"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722025",
+                        "name": "Lyon-Perrache",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Lyon-Perrache (Lyon)"
+                    },
+                    "headsign": "886263"
+                }
+            ],
+            "trip": {
+                "id": "OCE:SN886263F01002",
+                "name": "886263"
+            }
+        },
+        {
+            "journey_pattern": {
+                "id": "journey_pattern:1972",
+                "name": "journey_pattern:1972"
+            },
+            "codes": [],
+            "id": "OCE:SN886263F01002:modified:0:51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+            "validity_pattern": {
+                "days": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                "beginning_date": "20171030"
+            },
+            "disruptions": [
+                {
+                    "templated": false,
+                    "type": "disruption",
+                    "id": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+                    "rel": "disruptions",
+                    "internal": true
+                },
+                {
+                    "templated": false,
+                    "type": "disruption",
+                    "id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+                    "rel": "disruptions",
+                    "internal": true
+                },
+                {
+                    "templated": false,
+                    "type": "disruption",
+                    "id": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+                    "rel": "disruptions",
+                    "internal": true
+                }
+            ],
+            "name": "886263",
+            "stop_times": [
+                {
+                    "departure_time": "080800",
+                    "arrival_time": "080800",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.391639",
+                            "lon": "4.286432"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726729",
+                        "name": "Firminy",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Firminy (Firminy)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "081100",
+                    "arrival_time": "081100",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.394767",
+                            "lon": "4.322369"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726711",
+                        "name": "Le Chambon-Feugerolles",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Le Chambon-Feugerolles (Le Chambon-Feugerolles)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "081600",
+                    "arrival_time": "081500",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.403338",
+                            "lon": "4.358202"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726703",
+                        "name": "La Ricamarie",
+                        "equipments": [],
+                        "links": [],
+                        "label": "La Ricamarie (La Ricamarie)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "082000",
+                    "arrival_time": "081900",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.417197",
+                            "lon": "4.39266"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726190",
+                        "name": "St-Etienne-Bellevue",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-Bellevue (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "082300",
+                    "arrival_time": "082300",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.437095",
+                            "lon": "4.378405"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726174",
+                        "name": "St-Etienne-le-Clapier",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-le-Clapier (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "082600",
+                    "arrival_time": "082500",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.446813",
+                            "lon": "4.385386"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726901",
+                        "name": "St-Etienne-Carnot",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-Carnot (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "083400",
+                    "arrival_time": "082900",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.443376",
+                            "lon": "4.399999"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726000",
+                        "name": "St-Etienne-Ch\u00e2teaucreux",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Etienne-Ch\u00e2teaucreux (Saint-\u00c9tienne)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "084300",
+                    "arrival_time": "084200",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.472517",
+                            "lon": "4.516987"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726307",
+                        "name": "St-Chamond",
+                        "equipments": [],
+                        "links": [],
+                        "label": "St-Chamond (Saint-Chamond)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "085100",
+                    "arrival_time": "085000",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.524333",
+                            "lon": "4.606365"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87726331",
+                        "name": "Rive-de-Gier",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Rive-de-Gier (Rive-de-Gier)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "090200",
+                    "arrival_time": "090100",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.585364",
+                            "lon": "4.766246"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722405",
+                        "name": "Givors-Ville",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Givors-Ville (Givors)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "090500",
+                    "arrival_time": "090400",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.595696",
+                            "lon": "4.772496"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722439",
+                        "name": "Givors-Canal",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Givors-Canal (Givors)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "091300",
+                    "arrival_time": "091200",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.607249",
+                            "lon": "4.796141"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722298",
+                        "name": "Grigny-Le Sablon",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Grigny-Le Sablon (Grigny)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "091800",
+                    "arrival_time": "091700",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.645639",
+                            "lon": "4.813279"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722264",
+                        "name": "Vernaison",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Vernaison (Vernaison)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "092500",
+                    "arrival_time": "092400",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.706902",
+                            "lon": "4.824989"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722231",
+                        "name": "Pierre-B\u00e9nite",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Pierre-B\u00e9nite (Pierre-B\u00e9nite)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "092700",
+                    "arrival_time": "092700",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.717209",
+                            "lon": "4.813132"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722207",
+                        "name": "Oullins",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Oullins (Oullins)"
+                    },
+                    "headsign": "886263"
+                },
+                {
+                    "departure_time": "093300",
+                    "arrival_time": "093300",
+                    "stop_point": {
+                        "coord": {
+                            "lat": "45.748488",
+                            "lon": "4.825751"
+                        },
+                        "id": "stop_point:OCE:SP:TrainTER-87722025",
+                        "name": "Lyon-Perrache",
+                        "equipments": [],
+                        "links": [],
+                        "label": "Lyon-Perrache (Lyon)"
+                    },
+                    "headsign": "886263"
+                }
+            ],
+            "trip": {
+                "id": "OCE:SN886263F01002",
+                "name": "886263"
+            }
+        }
+    ],
+    "feed_publishers": [],
+    "disruptions": [
+        {
+            "updated_at": "20171122T122334",
+            "contributor": "realtime.ire",
+            "impact_id": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+            "uri": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+            "disruption_id": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+            "impacted_objects": [
+                {
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "quality": 0,
+                        "id": "OCE:SN886263F01002",
+                        "name": "OCE:SN886263F01002",
+                        "trip": {
+                            "id": "OCE:SN886263F01002",
+                            "name": "886263"
+                        }
+                    },
+                    "impacted_stops": [
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "080800",
+                            "amended_arrival_time": "080800",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "080800",
+                            "base_arrival_time": "080800",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.391639",
+                                    "lon": "4.286432"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726729",
+                                "name": "Firminy",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Firminy (Firminy)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "081100",
+                            "amended_arrival_time": "081100",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "081100",
+                            "base_arrival_time": "081100",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.394767",
+                                    "lon": "4.322369"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726711",
+                                "name": "Le Chambon-Feugerolles",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Le Chambon-Feugerolles (Le Chambon-Feugerolles)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "081600",
+                            "amended_arrival_time": "081500",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "081600",
+                            "base_arrival_time": "081500",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.403338",
+                                    "lon": "4.358202"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726703",
+                                "name": "La Ricamarie",
+                                "equipments": [],
+                                "links": [],
+                                "label": "La Ricamarie (La Ricamarie)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "082000",
+                            "amended_arrival_time": "081900",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "082000",
+                            "base_arrival_time": "081900",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.417197",
+                                    "lon": "4.39266"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726190",
+                                "name": "St-Etienne-Bellevue",
+                                "equipments": [],
+                                "links": [],
+                                "label": "St-Etienne-Bellevue (Saint-\u00c9tienne)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "082300",
+                            "amended_arrival_time": "082300",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "082300",
+                            "base_arrival_time": "082300",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.437095",
+                                    "lon": "4.378405"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726174",
+                                "name": "St-Etienne-le-Clapier",
+                                "equipments": [],
+                                "links": [],
+                                "label": "St-Etienne-le-Clapier (Saint-\u00c9tienne)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "082600",
+                            "amended_arrival_time": "082500",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "082600",
+                            "base_arrival_time": "082500",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.446813",
+                                    "lon": "4.385386"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726901",
+                                "name": "St-Etienne-Carnot",
+                                "equipments": [],
+                                "links": [],
+                                "label": "St-Etienne-Carnot (Saint-\u00c9tienne)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "083400",
+                            "amended_arrival_time": "082900",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "083400",
+                            "base_arrival_time": "082900",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.443376",
+                                    "lon": "4.399999"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726000",
+                                "name": "St-Etienne-Ch\u00e2teaucreux",
+                                "equipments": [],
+                                "links": [],
+                                "label": "St-Etienne-Ch\u00e2teaucreux (Saint-\u00c9tienne)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "084300",
+                            "amended_arrival_time": "084200",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "084300",
+                            "base_arrival_time": "084200",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.472517",
+                                    "lon": "4.516987"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726307",
+                                "name": "St-Chamond",
+                                "equipments": [],
+                                "links": [],
+                                "label": "St-Chamond (Saint-Chamond)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "085100",
+                            "amended_arrival_time": "085000",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "085100",
+                            "base_arrival_time": "085000",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.524333",
+                                    "lon": "4.606365"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87726331",
+                                "name": "Rive-de-Gier",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Rive-de-Gier (Rive-de-Gier)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "090200",
+                            "amended_arrival_time": "090100",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "090200",
+                            "base_arrival_time": "090100",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.585364",
+                                    "lon": "4.766246"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722405",
+                                "name": "Givors-Ville",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Givors-Ville (Givors)"
+                            }
+                        },
+                        {
+                            "arrival_status": "unchanged",
+                            "amended_departure_time": "090500",
+                            "amended_arrival_time": "090400",
+                            "departure_status": "unchanged",
+                            "cause": "",
+                            "stop_time_effect": "unchanged",
+                            "base_departure_time": "090500",
+                            "base_arrival_time": "090400",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.595696",
+                                    "lon": "4.772496"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722439",
+                                "name": "Givors-Canal",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Givors-Canal (Givors)"
+                            }
+                        },
+                        {
+                            "arrival_status": "delayed",
+                            "amended_departure_time": "091300",
+                            "amended_arrival_time": "091200",
+                            "departure_status": "delayed",
+                            "cause": "",
+                            "stop_time_effect": "delayed",
+                            "base_departure_time": "090800",
+                            "base_arrival_time": "090700",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.607249",
+                                    "lon": "4.796141"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722298",
+                                "name": "Grigny-Le Sablon",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Grigny-Le Sablon (Grigny)"
+                            }
+                        },
+                        {
+                            "arrival_status": "delayed",
+                            "amended_departure_time": "091800",
+                            "amended_arrival_time": "091700",
+                            "departure_status": "delayed",
+                            "cause": "",
+                            "stop_time_effect": "delayed",
+                            "base_departure_time": "091300",
+                            "base_arrival_time": "091200",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.645639",
+                                    "lon": "4.813279"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722264",
+                                "name": "Vernaison",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Vernaison (Vernaison)"
+                            }
+                        },
+                        {
+                            "arrival_status": "delayed",
+                            "amended_departure_time": "092500",
+                            "amended_arrival_time": "092400",
+                            "departure_status": "delayed",
+                            "cause": "",
+                            "stop_time_effect": "delayed",
+                            "base_departure_time": "092000",
+                            "base_arrival_time": "091900",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.706902",
+                                    "lon": "4.824989"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722231",
+                                "name": "Pierre-B\u00e9nite",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Pierre-B\u00e9nite (Pierre-B\u00e9nite)"
+                            }
+                        },
+                        {
+                            "arrival_status": "delayed",
+                            "amended_departure_time": "092700",
+                            "amended_arrival_time": "092700",
+                            "departure_status": "delayed",
+                            "cause": "",
+                            "stop_time_effect": "delayed",
+                            "base_departure_time": "092300",
+                            "base_arrival_time": "092200",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.717209",
+                                    "lon": "4.813132"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722207",
+                                "name": "Oullins",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Oullins (Oullins)"
+                            }
+                        },
+                        {
+                            "arrival_status": "delayed",
+                            "amended_departure_time": "093300",
+                            "amended_arrival_time": "093300",
+                            "departure_status": "delayed",
+                            "cause": "",
+                            "stop_time_effect": "delayed",
+                            "base_departure_time": "092800",
+                            "base_arrival_time": "092800",
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.748488",
+                                    "lon": "4.825751"
+                                },
+                                "id": "stop_point:OCE:SP:TrainTER-87722025",
+                                "name": "Lyon-Perrache",
+                                "equipments": [],
+                                "links": [],
+                                "label": "Lyon-Perrache (Lyon)"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "severity": {
+                "effect": "SIGNIFICANT_DELAYS",
+                "color": "#000000",
+                "name": "trip delayed",
+                "priority": 42
+            },
+            "status": "past",
+            "cause": "",
+            "application_periods": [
+                {
+                    "end": "20171121T093259",
+                    "begin": "20171121T080800"
+                }
+            ],
+            "id": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c",
+            "disruption_uri": "51c2ff70-68ad-49ca-8513-3ae5ccb38a7c"
+        },
+        {
+            "updated_at": "20171122T122334",
+            "impact_id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "contributor": "realtime.ire",
+            "disruption_id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "impacted_objects": [
+                {
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "quality": 0,
+                        "id": "OCE:SN886263F01002",
+                        "name": "OCE:SN886263F01002",
+                        "trip": {
+                            "id": "OCE:SN886263F01002",
+                            "name": "886263"
+                        }
+                    }
+                }
+            ],
+            "severity": {
+                "effect": "NO_SERVICE",
+                "color": "#000000",
+                "name": "trip canceled",
+                "priority": 42
+            },
+            "status": "past",
+            "cause": "",
+            "uri": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "application_periods": [
+                {
+                    "end": "20171122T092759",
+                    "begin": "20171122T080800"
+                }
+            ],
+            "id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "disruption_uri": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "messages": [
+                {
+                    "text": "Indisponibilit\u00e9 d'un mat\u00e9riel",
+                    "channel": {
+                        "name": "rt",
+                        "content_type": "",
+                        "id": "rt",
+                        "types": [
+                            "web",
+                            "mobile"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "updated_at": "20171122T122334",
+            "impact_id": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+            "contributor": "realtime.ire",
+            "disruption_id": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+            "impacted_objects": [
+                {
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "quality": 0,
+                        "id": "OCE:SN886263F01002",
+                        "name": "OCE:SN886263F01002",
+                        "trip": {
+                            "id": "OCE:SN886263F01002",
+                            "name": "886263"
+                        }
+                    }
+                }
+            ],
+            "severity": {
+                "effect": "NO_SERVICE",
+                "color": "#000000",
+                "name": "trip canceled",
+                "priority": 42
+            },
+            "status": "past",
+            "cause": "",
+            "uri": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+            "application_periods": [
+                {
+                    "end": "20171115T092759",
+                    "begin": "20171115T080800"
+                }
+            ],
+            "id": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+            "disruption_uri": "3f5da725-0c71-48ee-aec7-dc30834c040f",
+            "messages": [
+                {
+                    "text": "Train en panne",
+                    "channel": {
+                        "name": "rt",
+                        "content_type": "",
+                        "id": "rt",
+                        "types": [
+                            "web",
+                            "mobile"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

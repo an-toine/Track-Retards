@@ -135,7 +135,7 @@ class mysql(object):
 				& (trip.trip_disruption.is_null(True)))
 			.count())
 		query_disruption_type_count = (trip
-			.select(fn.COUNT(trip.trip_departure_date).alias('count'), disruption.disruption_cause.alias('cause'))
+			.select(fn.COUNT(trip.trip_departure_date).alias('count'), fn.IF(fn.CHAR_LENGTH(disruption.disruption_cause)>0, disruption.disruption_cause, 'Cause inconnue').alias('cause'))
 			.join(disruption)
 			.where((trip.trip_train_id == stats_object.num_train)
 				& (trip.trip_departure_date > stats_object._start_range)
@@ -145,7 +145,7 @@ class mysql(object):
 			.order_by(SQL('count').desc()))
 		tmp = []
 		for elmnt in query_disruption_type_count:
-			tmp.append((elmnt.trip_disruption.cause,elmnt.count))
+			tmp.append((elmnt.cause,elmnt.count))
 		stats_object.disruption_type_count = tmp
 		stats_object.disruption_time_sum = (disruption
 			.select(fn.SUM(disruption.disruption_delay))

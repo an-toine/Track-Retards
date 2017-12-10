@@ -18,14 +18,13 @@ except ImportError:
 try:
 	from outputs.Twitter import twitter
 	twitter_not_available = False
-except Exception:
+except ImportError:
 	twitter_not_available = True
 
 try:
 	from outputs.MySQL import mysql
 	mysql_not_available = False
-except Exception as e:
-	print(str(e))
+except ImportError:
 	mysql_not_available = True
 
 if __name__ == '__main__':
@@ -61,7 +60,7 @@ if __name__ == '__main__':
 		if(not results.no_twitter and not twitter_not_available):
 			#Instanciate a Twitter object with settings
 			twitter_service = twitter(settings)
-			twitter_service.post_message(stats_object.get_twitter_post())
+			twitter_service.post_stats(stats_object)
 		mysql_service.close_connection()
 		exit(0)
 	

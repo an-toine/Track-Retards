@@ -5,7 +5,6 @@ import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 import calendar
-import emoji
 
 class stats(object):
 
@@ -95,41 +94,6 @@ class stats(object):
 					output = output+"\n* {} : {} problèmes".format(elmnt[0],elmnt[1])
 		return output
 
-	def get_twitter_post(self):
-		if self._range_type == 'MONTHLY':
-			range_word = "ce mois ci"
-		else:
-			range_word = "cette semaine"
-		if self._disrupted_trip_count > 0:
-			punctuality_rate = round((self._normal_trip_count / self._trip_count) * 100,2)
-			last_punctuality_rate = (self._last_normal_trip_count / self._last_trip_count) * 100
-			average_delay = 0
-			if self._disruption_time_sum is not None:
-				average_delay = round((self._disruption_time_sum / self._trip_count),2)
-			
-			if self._disrupted_trip_count > self._last_disrupted_trip_count:
-				adjective = emoji.emojize("en baisse :chart_with_downwards_trend:",use_aliases=True)
-			elif self._disrupted_trip_count < self._last_disrupted_trip_count:
-				adjective = emoji.emojize("en hausse :chart_with_upwards_trend:",use_aliases=True)
-			else:
-				adjective = emoji.emojize("stable :arrow_right:",use_aliases=True)
-
-			canceled_block = ""
-			if self._canceled_trip_count > 0:
-				canceled_block = "dont {} suppressions, ".format(self._canceled_trip_count)
-
-			output = "@SNCFTERAURA #train {} perturbé {} fois {}, {}retard moyen de {} minutes, ponctualité de {}%, {}".format(self._num_train,
-				self._disrupted_trip_count,
-				range_word,
-				canceled_block,
-				average_delay,
-				punctuality_rate,
-				adjective)
-		else:
-			output = emoji.emojize("@SNCFTERAURA le #train {} n'a pas été perturbé {} :tada: Pourvu que ça dure...".format(self._num_train, range_word),use_aliases=True)
-
-		return output
-
 	@property
 	def num_train(self):
 		return self._num_train
@@ -153,6 +117,10 @@ class stats(object):
 	@property
 	def trip_count(self):
 		return self._trip_count
+
+	@property
+	def range_type(self):
+		return self._range_type
 
 	@trip_count.setter
 	def trip_count(self, value):

@@ -23,19 +23,19 @@ class DisruptionsHandler(tornado.web.RequestHandler):
 	def get(self):
 		count=self.get_arguments("count")
 		num_train=self.get_arguments("headsign")
-		#Train 860171 is cancelled and 6785 is delayed by 15 minutes
+		#Train 886263 is cancelled and 6785 is delayed by 15 minutes
 		if num_train != []:
-			if num_train[0] == "860171":
+			if num_train[0] == "886263":
 				#No start page ? Return the complete list of disrptions
 				if len(count) == 1:
 					output = ""
-					with open("test_server/860171/disruptions_count1_860171","r") as fichier:
+					with open("test_server/886263/disruptions_count1_886263","r") as fichier:
 						output = fichier.read()
 					return self.write(json.loads(output))
 				#Otherwise, return the last disruption, and update it
 				else:
 					output = ""
-					with open("test_server/860171/last_disruption_860171","r") as fichier:
+					with open("test_server/886263/last_disruption_886263","r") as fichier:
 						output = fichier.read()
 					return self.write(json.loads(self._update_template(output)))
 
@@ -62,6 +62,18 @@ class DisruptionsHandler(tornado.web.RequestHandler):
 					with open("test_server/13020/disruptions_13020","r") as fichier:
 						output = fichier.read()
 					return self.write(json.loads(self._update_template(output)))
+
+			elif num_train[0] == "860171":
+				if len(count) == 1:
+					output = ""
+					with open("test_server/860171/disruptions_count1_860171","r") as fichier:
+						output = fichier.read()
+					return self.write(json.loads(output))
+				else:
+					output = ""
+					with open("test_server/860171/last_disruption_860171","r") as fichier:
+						output = fichier.read()
+					return self.write(json.loads(self._update_template(output)))
 		else:
 			self.set_status(404)
 			return self.finish("Please specify a train number !")
@@ -69,8 +81,14 @@ class DisruptionsHandler(tornado.web.RequestHandler):
 #Handler used to return data about trips for cancelled train (no info in the disruption element)
 class TripsHandler(tornado.web.RequestHandler):
 	def get(self,trip_id):
-		#The route ID of train 860171
-		if trip_id == "OCE:SN860171F01005":
+		#The route ID of train 886263
+		if trip_id == "OCE:SN886263F01002":
+			output = ""
+			#Read and return data
+			with open("test_server/886263/trip_886263","r") as fichier:
+				output = fichier.read()
+			return self.write(json.loads(output))
+		elif trip_id == "OCE:SN860171F01005":
 			output = ""
 			#Read and return data
 			with open("test_server/860171/trip_860171","r") as fichier:

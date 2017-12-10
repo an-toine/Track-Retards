@@ -26,7 +26,7 @@ Afin de publier les retards des trains sur Twitter, il est également nécessair
 
 Le plus facile est de créer un compte dédié pour publier ces retards, et de suivre cette [documentation](https://www.digitalocean.com/community/tutorials/how-to-authenticate-a-python-application-with-twitter-using-tweepy-on-ubuntu-14-04#step-2-%E2%80%94-create-your-twitter-application) pour obtenir vos accès.
 
-Les identifiants doivent être complétés dans la section **Twitter** du fichier de configuration.
+Les identifiants, ainsi que les statuts à envoyer selon les situations doivent être complétés dans la section **Twitter** du fichier de configuration.
 
 ### Accès à l'API Google Sheets
 La publication des retards dans une feuille de calcul Google est également disponible pour bénéficier d'un suivi plus précis des retards.
@@ -178,7 +178,7 @@ Leur réalisation nécessite l'installation des modules python `unittest` et `to
 
 Pour pouvoir disposer de deux situations de test, les réponses renvoyées par l'API de la SNCF ont été sauvegardées dans deux répertoires distincts du dossier `test_server` du projet :
 
- * Le train 860171, qui est supprimé,
+ * Les trains 886263 et 860171, qui sont supprimés,
  * Les trains 13020 et 6785, en retard de 40 et 15 minutes.
 
 Ces réponses sont adaptées à la date de réalisation des tests, et envoyées par un serveur Tornado situé dans le script `test_server/server.py`.

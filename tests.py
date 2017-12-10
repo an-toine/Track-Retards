@@ -64,7 +64,7 @@ class FactoryTest(unittest.TestCase):
 		self._settings = settings("retards.cfg")
 		self._object_tools = tools(self._settings)
 		self._train_delayed = self._object_tools.get_disruptions("6785", True)
-		self._train_canceled = self._object_tools.get_disruptions("860171", True)
+		self._train_canceled = self._object_tools.get_disruptions("886263", True)
 
 	#Test delayed trains
 	def test_delay(self):
@@ -77,9 +77,9 @@ class FactoryTest(unittest.TestCase):
 
 	#Test canceled trains
 	def test_cancel(self):
-		factory = disruptionFactory(self._train_canceled,"860171",self._object_tools)
+		factory = disruptionFactory(self._train_canceled,"886263",self._object_tools)
 		event = factory.get_event()
 		#Check whether the event is of the correct type
 		self.assertIsInstance(event,canceled)
 		#Control the arrival city is correct
-		self.assertEqual(event.arrival_city,"Bressuire")
+		self.assertEqual(event.arrival_city,"Lyon-Perrache")

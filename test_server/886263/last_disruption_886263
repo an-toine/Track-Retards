@@ -1,0 +1,86 @@
+{
+    "pagination": {
+        "items_on_page": 1,
+        "total_result": 3,
+        "start_page": 2,
+        "items_per_page": 1
+    },
+    "links": [
+        {
+            "templated": true,
+            "type": "disruptions",
+            "rel": "disruptions",
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions/{disruptions.id}"
+        },
+        {
+            "templated": true,
+            "type": "trip",
+            "rel": "trips",
+            "href": "https://api.sncf.com/v1/coverage/sncf/trips/{trip.id}"
+        },
+        {
+            "type": "previous",
+            "templated": false,
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?count=1&start_page=1&headsign=886263"
+        },
+        {
+            "type": "first",
+            "templated": false,
+            "href": "https://api.sncf.com/v1/coverage/sncf/disruptions?count=1&start_page=1&headsign=886263"
+        }
+    ],
+    "feed_publishers": [],
+    "disruptions": [
+        {
+            "updated_at": "{{date_updated_at}}",
+            "impact_id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "contributor": "realtime.ire",
+            "disruption_id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "impacted_objects": [
+                {
+                    "pt_object": {
+                        "embedded_type": "trip",
+                        "quality": 0,
+                        "id": "OCE:SN886263F01002",
+                        "name": "OCE:SN886263F01002",
+                        "trip": {
+                            "id": "OCE:SN886263F01002",
+                            "name": "886263"
+                        }
+                    }
+                }
+            ],
+            "severity": {
+                "effect": "NO_SERVICE",
+                "color": "#000000",
+                "name": "trip canceled",
+                "priority": 42
+            },
+            "status": "past",
+            "cause": "",
+            "uri": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "application_periods": [
+                {
+                    "end": "{{date_end_application}}",
+                    "begin": "{{date_begin_application}}"
+                }
+            ],
+            "id": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "disruption_uri": "549541c2-cff2-41f7-88c9-085da3bb7524",
+            "messages": [
+                {
+                    "text": "Indisponibilit\u00e9 d'un mat\u00e9riel",
+                    "channel": {
+                        "name": "rt",
+                        "content_type": "",
+                        "id": "rt",
+                        "types": [
+                            "web",
+                            "mobile"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
